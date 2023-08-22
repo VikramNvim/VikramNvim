@@ -1,4 +1,4 @@
-![](https://github.com/not-scripter/VikramNvim/assets/106903627/37318e40-aae2-43c3-bbbf-a70289b98f5a)
+![](https://github.com/not-scripter/VikramNvim/assets/106903627/6aebf3e2-0238-4bb5-93c3-c677f8782388)
 
 # VikramNvim
 
