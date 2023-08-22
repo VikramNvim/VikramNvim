@@ -21,6 +21,8 @@ require("nvim-tree").setup()
 require("nvim-surround").setup()
 require("mason").setup()
 require('gitsigns').setup()
+require('neogit').setup()
+require('diffview').setup()
 require('notify').setup({
     background_colour = "NotifyBackground",
     fps = 30,

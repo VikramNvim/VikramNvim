@@ -22,7 +22,7 @@ function M.setup()
   local mappings = {
     ["w"] = { "<cmd>update!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
-    ["e"] = { "<cmd>NvimTreeFocus<CR>", "File Explorer" },
+    ["e"] = { "<cmd>NvimTreeFocus<CR>", "NvimTree" },
     -- ["c"] = { "<cmd>Ex<CR>", "" },
     ["ff"] = { "<cmd>Telescope<CR>", "Telescope" },
     ["f"] = { "<cmd>Telescope find_files<CR>", "Find File" },
@@ -30,6 +30,7 @@ function M.setup()
     ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
     ["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close all Buffer" },
+    ["c"] = { "<cmd>NvimTreeClose<CR>", "Close NvimTree" },
     ["/"] = { "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "Comment  Toggle" },
     -- ["."] = { "<cmd>'<,'>CommentToggle<CR>", "Comment in V mode" },
     ["p"] = { "\"_dp", "Replace word" },
