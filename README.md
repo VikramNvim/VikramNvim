@@ -4,14 +4,6 @@
 
 ## Installation
 
-```
+```git
 git clone https://github.com/not-scripter/VikramNvim ~/.config/nvim
-```
-
-```html
-<body>
-<h1>
-heading
-</h1>
-</body>
 ```
