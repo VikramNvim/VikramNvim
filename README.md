@@ -9,7 +9,9 @@ git clone https://github.com/not-scripter/VikramNvim ~/.config/nvim
 ```
 
 ```html
-<html>
-hey
-</html>
+<body>
+<h1>
+heading
+</h1>
+</body>
 ```
