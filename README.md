@@ -1,6 +1,4 @@
-
-
-<a style="color:red">what is DataBase</a>
+<a><font color=red>what is DataBase</a>
 
 # VikramNvim
 
