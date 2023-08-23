@@ -1,7 +1,7 @@
 
 # VikramNvim
 
-- [test]plenary.nvim)
+- [test](nvim-lua/plenary.nvim)
 
 ## Installation
 
