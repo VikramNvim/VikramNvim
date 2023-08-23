@@ -1,10 +1,8 @@
-<b><a>what is DataBase</a></b>
-
 # VikramNvim
 
 
 ## Installation
 
-``
+```bash
 git clone https://github.com/not-scripter/VikramNvim ~/.config/nvim
-``
+```
