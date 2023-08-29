@@ -9,9 +9,9 @@ return {
  },
  {
   "folke/which-key.nvim",
-  config = function()
-   require("plugs.confs.whichkey").setup()
-  end,
+  -- config = function()
+  --  require("plugs.confs.whichkey").setup()
+  -- end,
  },
  {
   'NvChad/nvim-colorizer.lua'
@@ -94,38 +94,53 @@ return {
   'mbbill/undotree'
  },
  -- test
- {
-  "L3MON4D3/LuaSnip",
-  -- follow latest release.
-  version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-  -- install jsregexp (optional!).
-  event = "VeryLazy",
-  build = "make install_jsregexp"
- },
+ -- {
+ --  "L3MON4D3/LuaSnip",
+ --  -- follow latest release.
+ --  version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+ --  -- install jsregexp (optional!).
+ --  event = "VeryLazy",
+ --  build = "make install_jsregexp"
+ -- },
+ -- {
+ --  'VonHeikemen/lsp-zero.nvim',
+ --  branch = 'v2.x',
+ --  dependencies = {
+ --   {'neovim/nvim-lspconfig'},
+ --   {
+ --    'williamboman/mason.nvim',
+ --    build = function()
+ --     pcall(vim.cmd, 'MasonUpdate')
+ --    end,
+ --   },
+ --   {'williamboman/mason-lspconfig.nvim'},
+ --   {'hrsh7th/nvim-cmp',},
+ --   {'hrsh7th/cmp-nvim-lsp'},
+ --   {'L3MON4D3/LuaSnip'},
+ --  }
+ -- },
+ -- { 'saadparwaiz1/cmp_luasnip' },
+ -- { 'hrsh7th/cmp-nvim-lsp' },
+ -- { "hrsh7th/cmp-nvim-lua" },
+ -- { 'hrsh7th/cmp-buffer' },
+ -- { 'hrsh7th/cmp-path' },
+ -- { 'rafamadriz/friendly-snippets' },
  -- test
+ -- LSP SERVERS
  {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v2.x',
-  dependencies = {
-   {'neovim/nvim-lspconfig'},
-   {
-    'williamboman/mason.nvim',
-    build = function()
-     pcall(vim.cmd, 'MasonUpdate')
-    end,
-   },
-   {'williamboman/mason-lspconfig.nvim'},
-   {'hrsh7th/nvim-cmp',},
-   {'hrsh7th/cmp-nvim-lsp'},
-   {'L3MON4D3/LuaSnip'},
-  }
- },
- { 'saadparwaiz1/cmp_luasnip' },
- { 'hrsh7th/cmp-nvim-lsp' },
- { "hrsh7th/cmp-nvim-lua" },
- { 'hrsh7th/cmp-buffer' },
- { 'hrsh7th/cmp-path' },
- { 'rafamadriz/friendly-snippets' },
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+},
+--Autocompletion
+{
+ 'hrsh7th/nvim-cmp',
+ 'hrsh7th/cmp-nvim-lsp',
+ 'L3MON4D3/LuaSnip',
+ 'saadparwaiz1/cmp_luasnip',
+ 'rafamadriz/friendly-snippets',
+},
+ -- test
  {
   "kylechui/nvim-surround",
   version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -189,6 +204,23 @@ return {
   },
   config = true
  },
+ {
+  "roobert/tailwindcss-colorizer-cmp.nvim",
+  -- optionally, override the default options:
+  config = function()
+    require("tailwindcss-colorizer-cmp").setup({
+      color_square_width = 2,
+    })
+  end
+},
+-- {
+--  'neovim/nvim-lspconfig',
+--  opts = {
+--   servers = {
+--    tailwindcss = {},
+--   }
+--  },
+-- },
 
 
 
