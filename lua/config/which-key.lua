@@ -6,17 +6,17 @@ function M.setup()
   local conf = {
     window = {
       border = "single", -- none, single, double, shadow
-      position = "bottom", -- bottom, top
+      position = "bottom",
     },
   }
 
   local opts = {
-    mode = {'n', 'v'}, -- Normal mode
+    mode = {'n', 'v'},
     prefix = "<leader>",
-    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true, -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = false, -- use `nowait` when creating keymaps
+    buffer = nil,
+    silent = true,
+    noremap = true,
+    nowait = false,
   }
 
   local mappings = {
@@ -61,10 +61,10 @@ function M.setup()
       f = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "First" },
     },
 
-    g = {
-      name = "Git",
-      s = { "<cmd>Neogit<CR>", "Status" },
-    },
+    -- g = {
+    --   name = "Git",
+    --   s = { "<cmd>Neogit<CR>", "Status" },
+    -- },
   }
 
   whichkey.setup(conf)
