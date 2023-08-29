@@ -33,9 +33,6 @@ return {
    "nvim-lua/plenary.nvim",
   },
  },
- -- {
- --  "catppuccin/nvim", name = "catppuccin", priority = 1000
- -- },
  {
   "folke/trouble.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -57,17 +54,6 @@ return {
   'pacokwon/plink.nvim'
  },
  {
-  "nvim-tree/nvim-tree.lua",
-  version = "*",
-  lazy = false,
-  dependencies = {
-   "nvim-tree/nvim-web-devicons",
-  },
-  config = function()
-   require("nvim-tree").setup {}
-  end,
- },
- {
   "numToStr/FTerm.nvim"
  },
  {
@@ -87,15 +73,15 @@ return {
     "neovim/nvim-lspconfig",
 },
 --Autocompletion
-{
- 'hrsh7th/nvim-cmp',
- 'hrsh7th/cmp-nvim-lsp',
- 'L3MON4D3/LuaSnip',
- 'saadparwaiz1/cmp_luasnip',
- 'rafamadriz/friendly-snippets',
- 'hrsh7th/cmp-buffer',
- 'hrsh7th/cmp-path',
-},
+-- {
+--  'hrsh7th/nvim-cmp',
+--  'hrsh7th/cmp-nvim-lsp',
+--  'L3MON4D3/LuaSnip',
+--  'saadparwaiz1/cmp_luasnip',
+--  'rafamadriz/friendly-snippets',
+--  'hrsh7th/cmp-buffer',
+--  'hrsh7th/cmp-path',
+-- },
  {
   "kylechui/nvim-surround",
   version = "*", -- Use for stability; omit to use `main` branch for the latest features
