@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('plugins')
 --LazyNvim
 vim.cmd.colorscheme "catppuccin"
-require("plugins.config.whichkey").setup()
+require("config.whichkey").setup()
 -- require("plugs.confs.lspconfig").setup()
 require 'colorizer'.setup()
 require("nvim-tree").setup()
