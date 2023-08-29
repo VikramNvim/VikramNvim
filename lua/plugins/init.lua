@@ -7,9 +7,6 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' }
  },
  {
-  "folke/which-key.nvim",
- },
- {
   'NvChad/nvim-colorizer.lua'
  },
  {
@@ -92,11 +89,11 @@ return {
    })
   end
  },
- {
-  'numToStr/Comment.nvim',
-  -- opts = {},
-  lazy = false,
- },
+ -- {
+ --  'numToStr/Comment.nvim',
+ --  -- opts = {},
+ --  lazy = false,
+ -- },
  {
   'ThePrimeagen/vim-be-good'
  },
