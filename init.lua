@@ -3,9 +3,7 @@ require('core.vars')
 require('core.keys')
 require("config.lazy")
 
-vim.cmd.colorscheme "catppuccin"
 require("config.whichkey").setup()
--- require("plugs.confs.lspconfig").setup()
 require 'colorizer'.setup()
 require("nvim-tree").setup()
 require("nvim-surround").setup()
