@@ -1,8 +1,55 @@
-![](https://github.com/not-scripter/VikramNvim/assets/106903627/6aebf3e2-0238-4bb5-93c3-c677f8782388)
-![](https://github.com/not-scripter/VikramNvim/assets/106903627/b6910ab0-7bcc-447b-8bf0-28a486c7e67d)
+![VikramVim](https://user-images.githubusercontent.com/106903627/262484657-6aebf3e2-0238-4bb5-93c3-c677f8782388.jpg)
 
-## Installation
+# Preview
 
+![Preview](https://user-images.githubusercontent.com/106903627/262631835-7c471260-4063-4189-9709-0ac524350173.jpg)
+
+# Installations
 ```bash
 git clone https://github.com/not-scripter/VikramNvim ~/.config/nvim
 ```
+
+# Plugins / Credits
+- [lazy.nvim]()
+- [plenary.nvim]()
+- [telescope.nvim]()
+- [which-key.nvim]()
+- [nvim-colorizer]()
+- [nvim-treesitter]()
+- [nvim-autopairs]()
+- [mason.nvim]()
+- [gitsigns.nvim]()
+- [lazygit.nvim]()
+- [catppuccin/nvim]()
+- [trouble.nvim]()
+- [staline.nvim]()
+- [plink.nvim]()
+- [nvim-tree]()
+- [nvim-web-devicons]()
+- [FTerm.nvim]()
+- [harpoon']()
+- [dressing.nvim]()
+- [undotree]()
+- [LuaSnip]()
+- [lsp-zero.nvim]()
+- [nvim-lspconfig]()
+- [mason-lspconfig.nvim]()
+- [nvim-cmp]()
+- [cmp-nvim-lsp]()
+- [cmp_luasnip]()
+- [cmp-nvim-lsp]()
+- [cmp-nvim-lua]()
+- [cmp-buffer]()
+- [cmp-path]()
+- [friendly-snippets]()
+- [nvim-surround]()
+- [Comment.nvim]()
+- [vim-be-good]()
+- [telescope-file-browser]()
+- [noice.nvim]()
+- [auto-save.nvim]()
+- [nui.nvim]()
+- [live-server.nvim]()
+- [nvim-notify]()
+- [neogi]()
+- [diffview.nvim]()
