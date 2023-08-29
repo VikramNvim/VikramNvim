@@ -20,6 +20,7 @@ return {
  },
  {
   "lewis6991/gitsigns.nvim",
+  opts = {}
  },
  {
   "kdheepak/lazygit.nvim",
@@ -55,11 +56,11 @@ return {
   'mbbill/undotree'
  },
  -- LSP SERVERS
- {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-},
+--  {
+--     "williamboman/mason.nvim",
+--     "williamboman/mason-lspconfig.nvim",
+--     "neovim/nvim-lspconfig",
+-- },
  {
   "kylechui/nvim-surround",
   version = "*",
@@ -96,15 +97,6 @@ return {
  {
   'barrett-ruth/live-server.nvim',
   build = 'yarn global add live-server',
-  config = true
- },
- {
-  "NeogitOrg/neogit",
-  dependencies = {
-   "nvim-lua/plenary.nvim",         
-   "nvim-telescope/telescope.nvim", 
-   "sindrets/diffview.nvim",       
-  },
   config = true
  },
 --  {

@@ -1,6 +1,6 @@
 return {
   "folke/which-key.nvim",
  config = function()
-  require("config.whichkey").setup()
+  require("config.which-key").setup()
  end
 }

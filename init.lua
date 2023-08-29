@@ -3,9 +3,6 @@ require('core.vars')
 require('core.keys')
 require("config.lazy")
 
-require('gitsigns').setup()
-require('neogit').setup()
-require('diffview').setup()
 require("telescope").load_extension("notify")
 require("notify").history()
 
