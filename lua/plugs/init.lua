@@ -4,14 +4,10 @@ return {
  },
  {
   'nvim-telescope/telescope.nvim', tag = '0.1.2',
-  -- or                              , branch = '0.1.x',
   dependencies = { 'nvim-lua/plenary.nvim' }
  },
  {
   "folke/which-key.nvim",
-  -- config = function()
-  --  require("plugs.confs.whichkey").setup()
-  -- end,
  },
  {
   'NvChad/nvim-colorizer.lua'
@@ -20,9 +16,6 @@ return {
   'nvim-treesitter/nvim-treesitter',
   build = ":TSUpdate",
  },
- -- {
- --   "lukas-reineke/indent-blankline.nvim"
- -- },
  {
   'windwp/nvim-autopairs',
   event = "InsertEnter",
@@ -36,7 +29,6 @@ return {
  },
  {
   "kdheepak/lazygit.nvim",
-  -- optional for floating window border decoration
   dependencies = {
    "nvim-lua/plenary.nvim",
   },
@@ -81,11 +73,6 @@ return {
  {
   'ThePrimeagen/harpoon'
  },
- -- {
- --   'mrjones2014/legendary.nvim',
- --   priority = 10000,
- --   lazy = false,
- -- },
  {
   'stevearc/dressing.nvim',
   opts = {},
@@ -93,39 +80,6 @@ return {
  {
   'mbbill/undotree'
  },
- -- test
- -- {
- --  "L3MON4D3/LuaSnip",
- --  -- follow latest release.
- --  version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
- --  -- install jsregexp (optional!).
- --  event = "VeryLazy",
- --  build = "make install_jsregexp"
- -- },
- -- {
- --  'VonHeikemen/lsp-zero.nvim',
- --  branch = 'v2.x',
- --  dependencies = {
- --   {'neovim/nvim-lspconfig'},
- --   {
- --    'williamboman/mason.nvim',
- --    build = function()
- --     pcall(vim.cmd, 'MasonUpdate')
- --    end,
- --   },
- --   {'williamboman/mason-lspconfig.nvim'},
- --   {'hrsh7th/nvim-cmp',},
- --   {'hrsh7th/cmp-nvim-lsp'},
- --   {'L3MON4D3/LuaSnip'},
- --  }
- -- },
- -- { 'saadparwaiz1/cmp_luasnip' },
- -- { 'hrsh7th/cmp-nvim-lsp' },
- -- { "hrsh7th/cmp-nvim-lua" },
- -- { 'hrsh7th/cmp-buffer' },
- -- { 'hrsh7th/cmp-path' },
- -- { 'rafamadriz/friendly-snippets' },
- -- test
  -- LSP SERVERS
  {
     "williamboman/mason.nvim",
@@ -139,8 +93,9 @@ return {
  'L3MON4D3/LuaSnip',
  'saadparwaiz1/cmp_luasnip',
  'rafamadriz/friendly-snippets',
+ 'hrsh7th/cmp-buffer',
+ 'hrsh7th/cmp-path',
 },
- -- test
  {
   "kylechui/nvim-surround",
   version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -165,13 +120,6 @@ return {
   { "nvim-telescope/telescope.nvim",
   "nvim-lua/plenary.nvim" }
  },
- -- {
- --   'neoclide/coc.nvim',
- --   branch = 'release'
- -- },
- -- {
- --   'mattn/emmet-vim'
- -- },
  {
   "folke/noice.nvim",
   event = "VeryLazy",
@@ -198,29 +146,20 @@ return {
  {
   "NeogitOrg/neogit",
   dependencies = {
-   "nvim-lua/plenary.nvim",         -- required
-   "nvim-telescope/telescope.nvim", -- optional
-   "sindrets/diffview.nvim",        -- optional
+   "nvim-lua/plenary.nvim",         
+   "nvim-telescope/telescope.nvim", 
+   "sindrets/diffview.nvim",       
   },
   config = true
  },
  {
   "roobert/tailwindcss-colorizer-cmp.nvim",
-  -- optionally, override the default options:
   config = function()
     require("tailwindcss-colorizer-cmp").setup({
       color_square_width = 2,
     })
   end
 },
--- {
---  'neovim/nvim-lspconfig',
---  opts = {
---   servers = {
---    tailwindcss = {},
---   }
---  },
--- },
 
 
 
