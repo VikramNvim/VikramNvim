@@ -14,9 +14,10 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
-require('lazy').setup('plugs')
+require('lazy').setup('plugins')
+--LazyNvim
 vim.cmd.colorscheme "catppuccin"
-require("plugs.confs.whichkey").setup()
+require("plugins.config.whichkey").setup()
 -- require("plugs.confs.lspconfig").setup()
 require 'colorizer'.setup()
 require("nvim-tree").setup()
@@ -235,3 +236,8 @@ vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
 vim.api.nvim_set_keymap('n', '<leader>pl', ':lua require"plink".ncopy()<CR>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>pl', ':lua require"plink".vcopy()<CR>', { noremap = true })
+
+
+-- require("cmp").config.formatting = {
+--   format = require("tailwindcss-colorizer-cmp").formatter
+-- }
