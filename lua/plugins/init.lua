@@ -7,7 +7,7 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' }
  },
  {
-  'NvChad/nvim-colorizer.lua',
+  'norcalli/nvim-colorizer.lua',
   opts = {}
  },
  {
