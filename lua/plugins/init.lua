@@ -35,9 +35,6 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {}
  },
- {
-  'tamton-aquib/staline.nvim'
- },
  -- {
  --   'darksinge/plink.nvim',
  --   commit = '4e62e47',
