@@ -7,11 +7,8 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' }
  },
  {
-  'NvChad/nvim-colorizer.lua'
- },
- {
-  'nvim-treesitter/nvim-treesitter',
-  build = ":TSUpdate",
+  'NvChad/nvim-colorizer.lua',
+  opts = {}
  },
  {
   'windwp/nvim-autopairs',
@@ -51,9 +48,6 @@ return {
   "numToStr/FTerm.nvim"
  },
  {
-  'ThePrimeagen/harpoon'
- },
- {
   'stevearc/dressing.nvim',
   opts = {},
  },
@@ -66,31 +60,15 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
 },
---Autocompletion
--- {
---  'hrsh7th/nvim-cmp',
---  'hrsh7th/cmp-nvim-lsp',
---  'L3MON4D3/LuaSnip',
---  'saadparwaiz1/cmp_luasnip',
---  'rafamadriz/friendly-snippets',
---  'hrsh7th/cmp-buffer',
---  'hrsh7th/cmp-path',
--- },
  {
   "kylechui/nvim-surround",
-  version = "*", -- Use for stability; omit to use `main` branch for the latest features
+  version = "*",
   event = "VeryLazy",
   config = function()
    require("nvim-surround").setup({
-    -- Configuration here, or leave empty to use defaults
    })
   end
  },
- -- {
- --  'numToStr/Comment.nvim',
- --  -- opts = {},
- --  lazy = false,
- -- },
  {
   'ThePrimeagen/vim-be-good'
  },
@@ -119,9 +97,6 @@ return {
   'barrett-ruth/live-server.nvim',
   build = 'yarn global add live-server',
   config = true
- },
- {
-  'rcarriga/nvim-notify'
  },
  {
   "NeogitOrg/neogit",

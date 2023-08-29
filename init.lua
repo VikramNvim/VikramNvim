@@ -3,29 +3,9 @@ require('core.vars')
 require('core.keys')
 require("config.lazy")
 
-require 'colorizer'.setup()
-require("nvim-surround").setup()
 require('gitsigns').setup()
 require('neogit').setup()
 require('diffview').setup()
-require('notify').setup({
-    background_colour = "NotifyBackground",
-    fps = 30,
-    icons = {
-      DEBUG = "",
-      ERROR = "",
-      INFO = "",
-      TRACE = "✎",
-      WARN = ""
-    },
-    level = 2,
-    minimum_width = 100,
-    render = "compact",
-    stages = "static",
-    timeout = 3000,
-    top_down = false,
-  })
-require("notify")("Welcome Buddy!")
 require("telescope").load_extension("notify")
 require("notify").history()
 
@@ -37,11 +17,6 @@ require('stabline').setup({
   stab_right  = "",
   inactive_bg = "#181a23",
   inactive_fg = "#aaaaaa",
-})
-require("harpoon").setup({
-  menu = {
-    width = vim.api.nvim_win_get_width(0) - 10,
-  }
 })
 
 --LSP SETUP
