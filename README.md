@@ -1,8 +1,8 @@
-![VikramVim](https://user-images.githubusercontent.com/106903627/262484657-6aebf3e2-0238-4bb5-93c3-c677f8782388.jpg)
+![VikramVim](https://github.com/not-scripter/VikramNvim/assets/106903627/565c02ba-760c-4b29-91fe-187a73dba4ed)
 
 # Preview
 
-![Preview](https://user-images.githubusercontent.com/106903627/262631835-7c471260-4063-4189-9709-0ac524350173.jpg)
+![Preview](https://github.com/not-scripter/VikramNvim/assets/106903627/0e235d77-930d-4478-a797-8a6d30629153)
 
 # Installations
 ```bash
