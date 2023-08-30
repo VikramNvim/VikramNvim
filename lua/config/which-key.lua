@@ -1,32 +1,32 @@
 local M = {}
 
 function M.setup()
-  local whichkey = require "which-key"
+ local whichkey = require "which-key"
 
-  local conf = {
-    window = {
-      border = "single", -- none, single, double, shadow
-      position = "bottom",
-    },
-  }
+ local conf = {
+  window = {
+   border = "single", -- none, single, double, shadow
+   position = "bottom",
+  },
+ }
 
-  local opts = {
-    mode = {'n', 'v'},
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-  }
+ local opts = {
+  mode = {'n', 'v'},
+  prefix = "<leader>",
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = false,
+ }
 
-  local mappings = {
-    ["w"] = { "<cmd>update!<CR>", "Save" },
-    ["q"] = { "<cmd>q!<CR>", "Quit" },
-    ["e"] = { "<cmd>NvimTreeFocus<CR>", "NvimTree" },
-    -- ["c"] = { "<cmd>Ex<CR>", "" },
-    --
-    ["f"] = { "<cmd>Telescope<CR>", "Telescope" },
-    ["ff"] = { "<cmd>Telescope find_files prompt_prefix=🔍<CR>", "Find File" },
+ local mappings = {
+  ["w"] = { "<cmd>update!<CR>", "Save" },
+  ["q"] = { "<cmd>q!<CR>", "Quit" },
+  ["e"] = { "<cmd>NvimTreeFocus<CR>", "NvimTree" },
+  -- ["c"] = { "<cmd>Ex<CR>", "" },
+  --
+  ["f"] = { "<cmd>Telescope<CR>", "Telescope" },
+  ["ff"] = { "<cmd>Telescope find_files prompt_prefix=🔍<CR>", "Find File" },
 
     ["t"] = { "<cmd>lua require('FTerm').open()<CR>", "FTerm" },
     ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
@@ -71,6 +71,6 @@ function M.setup()
 
   whichkey.setup(conf)
   whichkey.register(mappings, opts)
-end
+ end
 
 return M

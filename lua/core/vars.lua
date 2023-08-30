@@ -1,4 +1,3 @@
---[[ vars.lua ]]
 local g = vim.g
 g.t_co = 256
 g.background = "dark"
@@ -10,17 +9,13 @@ g.mapleader = " "
 g.maplocalleader = " "
 -- Give me some fenced codeblock goodness
 g.markdown_fenced_languages = {
-  "html",
-  "javascript",
-  "javascriptreact",
-  "typescript",
-  "json",
-  "css",
-  "scss",
-  "lua",
-  "vim",
-  "bash",
-  "ts=typescript",
-  "js=javascript",
+ "html",
+ "javascript",
+ "javascriptreact",
+ "json",
+ "css",
+ "lua",
+ "vim",
+ "bash",
 }
 
