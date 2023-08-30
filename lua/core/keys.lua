@@ -36,8 +36,8 @@ keymap("n", "<S-Tab>", "<cmd>vsplit<CR>", default_opts)
 
 --legendary.nvim
 local keymaps = {
-    { '<leader>s', ':wa<CR>', description = 'Write all buffers', opts = {} },
-    { '<leader>F', vim.lsp.buf.formatting_sync, description = 'Format buffer with LSP' },
+ { '<leader>s', ':wa<CR>', description = 'Write all buffers', opts = {} },
+ { '<leader>F', vim.lsp.buf.formatting_sync, description = 'Format buffer with LSP' },
 }
 
 

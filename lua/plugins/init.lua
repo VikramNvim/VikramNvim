@@ -9,12 +9,6 @@ return {
   },
  },
  {
-  'norcalli/nvim-colorizer.lua',
-  config = function()
-   require("colorizer").setup()
-  end
- },
- {
   'windwp/nvim-autopairs',
   event = "InsertEnter",
   opts = {}
@@ -63,7 +57,7 @@ return {
   dependencies = {
    "nvim-telescope/telescope.nvim",
    "nvim-lua/plenary.nvim"
- },
+  },
  },
  {
   "folke/noice.nvim",
@@ -85,20 +79,21 @@ return {
   build = 'yarn global add live-server',
   config = true
  },
---  {
---   "roobert/tailwindcss-colorizer-cmp.nvim",
---   config = function()
---     require("tailwindcss-colorizer-cmp").setup({
---       color_square_width = 2,
---     })
---   end
--- },
--- {
---  'L3MON4D3/LuaSnip',
---  config = function()
---   require("config.snippet").setup()
---  end
--- }
+ --  {
+ --   "roobert/tailwindcss-colorizer-cmp.nvim",
+ --   config = function()
+ --     require("tailwindcss-colorizer-cmp").setup({
+ --       color_square_width = 2,
+ --     })
+ --   end
+ -- },
+ -- {
+ --  'L3MON4D3/LuaSnip',
+ --  config = function()
+ --   require("config.snippet").setup()
+ --  end
+ -- }
+
 
 
 
