@@ -24,8 +24,10 @@ function M.setup()
     ["q"] = { "<cmd>q!<CR>", "Quit" },
     ["e"] = { "<cmd>NvimTreeFocus<CR>", "NvimTree" },
     -- ["c"] = { "<cmd>Ex<CR>", "" },
-    ["ff"] = { "<cmd>Telescope<CR>", "Telescope" },
-    ["f"] = { "<cmd>Telescope find_files<CR>", "Find File" },
+    --
+    ["f"] = { "<cmd>Telescope<CR>", "Telescope" },
+    ["ff"] = { "<cmd>Telescope find_files prompt_prefix=🔍<CR>", "Find File" },
+
     ["t"] = { "<cmd>lua require('FTerm').open()<CR>", "FTerm" },
     ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
@@ -36,8 +38,8 @@ function M.setup()
     ["p"] = { "\"_dp", "Replace word" },
     ["y"] = { "\"+y", "unknown" },
     ["Y"] = { "\"+Y", "unknown" },
-    ["d"] = { "\"_d", "unkown" },
-    ["A"] = { "=ap", "unkown" },
+    ["d"] = { "\"_d", "unknown" },
+    ["<leader>"] = { "=ap", "Format" },
 
 
     z = {
