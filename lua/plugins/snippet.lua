@@ -30,19 +30,69 @@ local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 local k = require("luasnip.nodes.key_indexer").new_key
 
-
+--HTML SNIPPETS
 ls.add_snippets("html", {
  
  s("id", { 
-		t('id="'), i(1, ""), t('"')
+		t('id="'), i(1), t('"')
  }),
  s("c", { 
-		t('class="'), i(1, ""), t('"')
+		t('class="'), i(1), t('"')
  }),
  s("on", { 
-		t('onclick="'), i(1, ""), t('"')
+		t('onclick="'), i(1), t('"')
  }),
  
+})
+
+--CSS SNIPPETS
+ls.add_snippets("css", {
+ 
+ s("tr", { 
+		t('transform: '), i(1), t(';')
+ }),
+ s("t", { 
+		t('translate('), i(1), t(')')
+ }),
+ s("tx", { 
+		t('translateX('), i(1), t(')')
+ }),
+ s("ty", { 
+		t('translateY('), i(1), t(')')
+ }),
+ s("g", { 
+		t('gap: '), i(1), t(';')
+ }),
+ 
+})
+
+--JS SNIPPETS
+ls.add_snippets("javascript", {
+ 
+ -- s("id", { 
+	-- 	t('id="'), i(1, ""), t('"')
+ -- }),
+ 
+})
+
+--REACT SNIPPETS
+ls.add_snippets("javascriptreact", {
+ 
+ s("cn", { 
+		t('className="'), i(1), t('"')
+ }),
+ 
+})
+
+--LUA SNIPPETS
+ls.add_snippets("lua", {
+ 
+ s("c", { 
+		t({'config = function()'}),
+		t({"", " "}), i(1),
+		t({"", 'end'}),
+ }),
+
 })
 
  end
