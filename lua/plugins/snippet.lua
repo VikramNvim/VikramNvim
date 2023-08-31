@@ -33,6 +33,9 @@ local k = require("luasnip.nodes.key_indexer").new_key
 --HTML SNIPPETS
 ls.add_snippets("html", {
 
+ s("sc", { 
+		t('<script defer src="'), i(1, "script.js"), t('"></script>')
+ }),
  s("id", { 
 		t('id="'), i(1), t('"')
  }),
