@@ -2,6 +2,10 @@ return {
  'L3MON4D3/LuaSnip',
  config = function()
 
+require('luasnip').filetype_extend("javascript", { "javascriptreact" })
+require('luasnip').filetype_extend("javascript", { "html" })
+-- require('luasnip').filetype_extend("javascript", { "gsap" })
+
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
