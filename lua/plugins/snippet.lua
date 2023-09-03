@@ -2,6 +2,10 @@ return {
  'L3MON4D3/LuaSnip',
  config = function()
 
+require('luasnip').filetype_extend("javascript", { "javascriptreact" })
+require('luasnip').filetype_extend("javascript", { "html" })
+-- require('luasnip').filetype_extend("javascript", { "gsap" })
+
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -33,6 +37,9 @@ local k = require("luasnip.nodes.key_indexer").new_key
 --HTML SNIPPETS
 ls.add_snippets("html", {
 
+ s("sc", { 
+		t('<script defer src="'), i(1, "script.js"), t('"></script>')
+ }),
  s("id", { 
 		t('id="'), i(1), t('"')
  }),
@@ -48,22 +55,24 @@ ls.add_snippets("html", {
 --CSS SNIPPETS
 ls.add_snippets("css", {
  
- s("tr", { 
-		t('transform: '), i(1), t(';')
+ s("*", { 
+		t({'* {'}),
+		t({"", ' margin: 0;'}),
+		t({"", ' padding: 0;'}),
+		t({"", ' box-sizing: border-box'}),
+		t({"", '}'}),
+		t({"", ''}),
+		t({"", 'html, body {'}),
+		t({"", ' '}), i(1),
+		t({"", '}'}),
  }),
- s("t", { 
-		t('translate('), i(1), t(')')
+ s("tf", { 
+  t('transform: translate('), i(1, '-50%'), t(', '), i(2, '-50%'), t(');')
  }),
- s("tx", { 
-		t('translateX('), i(1), t(')')
+ s("tn", { 
+  t('transition: all '), i(1, '.5s'), t(' ease;')
  }),
- s("ty", { 
-		t('translateY('), i(1), t(')')
- }),
- s("g", { 
-		t('gap: '), i(1), t(';')
- }),
- 
+
 })
 
 --JS SNIPPETS
