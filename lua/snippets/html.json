@@ -1,16 +1,38 @@
 {
-	"snip1": {
-		"prefix": "htm1",
+	"sc": {
+		"prefix": "sc",
 		"body": [
-			"expands? jumps? $1 $2 !"
-		]
+			"<script defer src='${1:script.js}'></script>"
+		],
+  "description": ""
 	},
-	"snip2": {
-		"prefix": "htm2",
+	"id": {
+		"prefix": "id",
 		"body": [
-			"multi $1",
-			"line $2",
-			"snippet$0"
-		]
+			"id='$1'"
+		],
+  "description": ""
+	},
+	"c": {
+		"prefix": "c",
+		"body": [
+			"class='$1'"
+		],
+  "description": ""
+	},
+	"cl": {
+		"prefix": "cl",
+		"body": [
+			"onClick='$1'"
+		],
+  "description": ""
+	},
+	"ch": {
+		"prefix": "ch",
+		"body": [
+			"onChange='$1'"
+		],
+  "description": ""
 	}
+
 }

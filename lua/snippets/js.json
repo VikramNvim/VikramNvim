@@ -1,16 +1,9 @@
 {
-	"snip1": {
-		"prefix": "js1",
+	"js": {
+		"prefix": "js",
 		"body": [
-			"expands? jumps? $1 $2 !"
-		]
-	},
-	"snip2": {
-		"prefix": "js2",
-		"body": [
-			"multi $1",
-			"line $2",
-			"snippet$0"
-		]
+			"js"
+		],
+  "description": ""
 	}
 }

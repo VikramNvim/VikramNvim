@@ -1,16 +1,32 @@
 {
-	"snip1": {
-		"prefix": "css1",
+	"transform": {
+		"prefix": "tf",
 		"body": [
-			"expands? jumps? $1 $2 !"
-		]
+			"transform: translate(${1:-50%}, ${2:-50%};)"
+		],
+  "description": ""
 	},
-	"snip2": {
-		"prefix": "css2",
+	"transition": {
+		"prefix": "tr",
 		"body": [
-			"multi $1",
-			"line $2",
-			"snippet$0"
-		]
+			"transition: all ${1:.5s} ease-in-out;"
+		],
+  "description": ""
+	},
+
+	"*": {
+		"prefix": "*",
+		"body": [
+			"*{",
+			"margin: 0;",
+			"padding: 0;",
+   "box-sizing: border-box;",
+   "}",
+   "",
+   "html, body{",
+   " $1",
+   "}"
+		],
+  "description": ""
 	}
 }

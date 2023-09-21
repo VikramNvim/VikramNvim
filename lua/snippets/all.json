@@ -1,16 +1,8 @@
 {
-	"snip1": {
-		"prefix": "all1",
+	"vikram": {
+		"prefix": "vikram",
 		"body": [
-			"expands? jumps? $1 $2 !"
-		]
-	},
-	"snip2": {
-		"prefix": "all2",
-		"body": [
-			"multi $1",
-			"line $2",
-			"snippet$0"
+			"VikramNvim"
 		]
 	}
 }

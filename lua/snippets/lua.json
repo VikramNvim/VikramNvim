@@ -1,8 +1,11 @@
 {
-	"snip1": {
-		"prefix": "lua",
+	"config": {
+		"prefix": "config",
 		"body": [
-			"lualualua"
-		]
+			"config = function()",
+   "$1",
+   "end"
+		],
+  "description": ""
 	}
 }
