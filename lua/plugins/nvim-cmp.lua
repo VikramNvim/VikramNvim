@@ -5,21 +5,16 @@ return {
   {'hrsh7th/cmp-nvim-lsp',},
   {'L3MON4D3/LuaSnip',},
   {'saadparwaiz1/cmp_luasnip',},
-  {'rafamadriz/friendly-snippets',},
   {'hrsh7th/cmp-buffer',},
   {'hrsh7th/cmp-path',},
   {'roobert/tailwindcss-colorizer-cmp.nvim',
   config = true },
 
  },
+
  config = function()
   local cmp = require('cmp')
 
-  require('luasnip.loaders.from_vscode').lazy_load()
-
--- require('luasnip').filetype_extend("javascript", { "javascriptreact" })
--- require('luasnip').filetype_extend("javascript", { "html" })
--- require('luasnip').filetype_extend("javascript", { "gsap" })
 
 cmp.setup({
  completion = {

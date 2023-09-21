@@ -1,0 +1,214 @@
+{
+	"use client": {
+		"prefix": "uc",
+		"body": [
+			"'use client'"
+		],
+  "description": ""
+	},
+	"useState": {
+		"prefix": "useState",
+		"body": [
+			"import React, { useState } from 'react';"
+		],
+  "description": ""
+	},
+	"useEffect": {
+		"prefix": "useEffect",
+		"body": [
+			"import React, { useEffect, userState } from 'react';"
+		],
+  "description": ""
+	},
+	"Link": {
+		"prefix": "Link",
+		"body": [
+			"import Link from 'next/link';"
+		],
+  "description": ""
+	},
+	"axios": {
+		"prefix": "axios",
+		"body": [
+			"import axios from 'axios';"
+		],
+  "description": ""
+	},
+	"suppressHydrationWarning": {
+		"prefix": "suppressHydrationWarning",
+		"body": [
+			"suppressHydrationWarning"
+		],
+  "description": ""
+	},
+	"className": {
+		"prefix": "cn",
+		"body": [
+			"className='$1'"
+		],
+  "description": ""
+	},
+	"onClick": {
+		"prefix": "cl",
+		"body": [
+			"onClick={$1}"
+		],
+  "description": ""
+	},
+	"onChange": {
+		"prefix": "ch",
+		"body": [
+			"onChange={$1}"
+		],
+  "description": ""
+	},
+
+	"<></>": {
+		"prefix": "<",
+		"body": [
+			"<>",
+			"$1",
+			"</>"
+		],
+  "description": ""
+	},
+	"div": {
+		"prefix": "div",
+		"body": [
+			"<div>",
+			"$1",
+			"</div>"
+		],
+  "description": ""
+	},
+	"main": {
+		"prefix": "main",
+		"body": [
+			"<main>",
+			"$1",
+			"</main>"
+		],
+  "description": ""
+	},
+	"nav": {
+		"prefix": "nav",
+		"body": [
+			"<nav>",
+			"$1",
+			"</nav>"
+		],
+  "description": ""
+	},
+	"header": {
+		"prefix": "header",
+		"body": [
+			"<header>",
+			"$1",
+			"</header>"
+		],
+  "description": ""
+	},
+	"footer": {
+		"prefix": "footer",
+		"body": [
+			"<footer>",
+			"$1",
+			"</footer>"
+		],
+  "description": ""
+	},
+	"p": {
+		"prefix": "p",
+		"body": [
+			"<p>",
+			"$1",
+			"</p>"
+		],
+  "description": ""
+	},
+	"input": {
+		"prefix": "input",
+		"body": [
+			"<input",
+   "type='text'",
+   "value={$1}",
+   "onChange={$2}",
+			"/>"
+		],
+  "description": ""
+	},
+	"button": {
+		"prefix": "btn",
+		"body": [
+			"<button",
+   "onClick={$2}>",
+   "$1",
+			"</button>"
+		],
+  "description": ""
+	},
+	"link": {
+		"prefix": "link",
+		"body": [
+			"<Link",
+   "href='$2'>",
+			"$1",
+			"</Link>"
+		],
+  "description": ""
+	},
+	"h1": {
+		"prefix": "h1",
+		"body": [
+			"<h1>",
+			"$1",
+			"</h1>"
+		],
+  "description": ""
+	},
+	"h2": {
+		"prefix": "h2",
+		"body": [
+			"<h2>",
+			"$1",
+			"</h2>"
+		],
+  "description": ""
+	},
+	"h3": {
+		"prefix": "h3",
+		"body": [
+			"<h3>",
+			"$1",
+			"</h3>"
+		],
+  "description": ""
+	},
+	"h4": {
+		"prefix": "h4",
+		"body": [
+			"<h4>",
+			"$1",
+			"</h4>"
+		],
+  "description": ""
+	},
+	"h5": {
+		"prefix": "h5",
+		"body": [
+			"<h5>",
+			"$1",
+			"</h5>"
+		],
+  "description": ""
+	},
+	"h6": {
+		"prefix": "h6",
+		"body": [
+			"<h6>",
+			"$1",
+			"</h6>"
+		],
+  "description": ""
+	}
+}
