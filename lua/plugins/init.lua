@@ -1,5 +1,19 @@
 return {
  {
+  "folke/which-key.nvim",
+  config = function()
+   require("config.which-key").setup()
+  end
+ },
+ {
+  'akinsho/bufferline.nvim',
+  version = "*",
+  dependencies = 'nvim-tree/nvim-web-devicons',
+  config = function()
+   require("config.bufferline").setup()
+  end
+ },
+ {
   'nvim-lua/plenary.nvim',
  },
  {
