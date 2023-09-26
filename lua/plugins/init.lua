@@ -1,12 +1,33 @@
 return {
  {
+  "folke/which-key.nvim",
+  config = function()
+   require("config.which-key").setup()
+  end
+ },
+ {
+  'akinsho/bufferline.nvim',
+  version = "*",
+  dependencies = 'nvim-tree/nvim-web-devicons',
+  config = function()
+   require("config.bufferline").setup()
+  end
+ },
+ {
+  'nvim-lualine/lualine.nvim',
+  dependencies = {
+   'nvim-tree/nvim-web-devicons', opt = true
+  },
+  config = function()
+   require("config.lualine").setup()
+  end
+ },
+ {
   'nvim-lua/plenary.nvim',
  },
  {
   'nvim-telescope/telescope.nvim', tag = '0.1.2',
-  dependencies = {
-   'nvim-lua/plenary.nvim'
-  },
+  dependencies = 'nvim-lua/plenary.nvim',
  },
  {
   'windwp/nvim-autopairs',
@@ -19,15 +40,11 @@ return {
  },
  {
   "kdheepak/lazygit.nvim",
-  dependencies = {
-   "nvim-lua/plenary.nvim",
-  },
+  dependencies = "nvim-lua/plenary.nvim",
  },
  {
   "folke/trouble.nvim",
-  dependencies = {
-   "nvim-tree/nvim-web-devicons"
-  },
+  dependencies = "nvim-tree/nvim-web-devicons",
   opts = {},
  },
  {
@@ -76,7 +93,7 @@ return {
  },
  {
   'barrett-ruth/live-server.nvim',
-  -- build = 'yarn global add live-server',
+  build = 'yarn global add live-server',
   config = true
  },
  --  {
@@ -87,15 +104,6 @@ return {
  --     })
  --   end
  -- },
- -- {
- --  'L3MON4D3/LuaSnip',
- --  config = function()
- --   require("config.snippet").setup()
- --  end
- -- }
-
-
-
 
 
 }
