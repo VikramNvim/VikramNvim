@@ -7,6 +7,8 @@ return {
   {'saadparwaiz1/cmp_luasnip',},
   {'hrsh7th/cmp-buffer',},
   {'hrsh7th/cmp-path',},
+  -- {'hrsh7th/cmp-cmdline',},
+  {'onsails/lspkind.nvim',},
   -- {'roobert/tailwindcss-colorizer-cmp.nvim', config = true },
  },
 
@@ -14,7 +16,38 @@ return {
  opts = function(_, opts)
 
   local cmp = require('cmp')
+  local lspkind = require('lspkind')
 
+  local kind_icons = {
+   Text = "",
+   Method = "󰆧",
+   Function = "󰊕",
+   Constructor = "",
+   Field = "󰇽",
+   Variable = "󰂡",
+   Class = "󰠱",
+   Interface = "",
+   Module = "",
+   Property = "󰜢",
+   Unit = "",
+   Value = "󰎠",
+   Enum = "",
+   Keyword = "󰌋",
+   Snippet = "",
+   Color = "󰏘",
+   File = "󰈙",
+   Reference = "",
+   Folder = "󰉋",
+   EnumMember = "",
+   Constant = "󰏿",
+   Struct = "",
+   Event = "",
+   Operator = "󰆕",
+   TypeParameter = "󰅲",
+  }
+
+  vim.api.nvim_set_hl(0, "VikramOne", { bg = "lightred", fg = "black"})
+  vim.api.nvim_set_hl(0, "VikramSel", { bg = "black", fg = "lightblue", bold = true, italic = true})
 
 cmp.setup({
  completion = {
@@ -36,8 +69,14 @@ cmp.setup({
  },
 
  window = {
-  completion = cmp.config.window.bordered(border_opts),
+  completion = cmp.config.window.bordered({
+   border = {
+    "", "", "", "", "", "", "", "",
+   },
+   winhighlight = "Normal:VikramSel,FloatBorder:VikramSel,CursorLine:VikramOne,Search:VikramOne"
+  }),
   documentation = cmp.config.window.bordered(border_opts),
+  -- side_padding = 0,
  },
 
  snippet = {
@@ -46,7 +85,22 @@ cmp.setup({
   end,
  },
 
- formatting = formatting_style,
+ formatting = {
+    format = function(entry, vim_item)
+      -- Kind icons
+      vim_item.kind = lspkind.presets.default[vim_item.kind]
+      -- Source
+      vim_item.menu = ({
+        buffer = "[Buffer]",
+        nvim_lsp = "[LSP]",
+        look = "[Dick]",
+        -- luasnip = "[LuaSnip]",
+        -- nvim_lua = "[Lua]",
+        -- latex_symbols = "[LaTeX]",
+      })[entry.source.name]
+      return vim_item
+    end
+  },
 
  mapping = {
   ["<Up>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
@@ -64,7 +118,7 @@ cmp.setup({
    behavior = cmp.ConfirmBehavior.Insert,
    select = true,
   },
- }
+ },
 })
 
  end,
