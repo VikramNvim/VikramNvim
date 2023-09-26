@@ -7,12 +7,12 @@ return {
   {'saadparwaiz1/cmp_luasnip',},
   {'hrsh7th/cmp-buffer',},
   {'hrsh7th/cmp-path',},
-  {'roobert/tailwindcss-colorizer-cmp.nvim',
-  config = true },
-
+  -- {'roobert/tailwindcss-colorizer-cmp.nvim', config = true },
  },
 
- config = function()
+ -- config = function()
+ opts = function(_, opts)
+
   local cmp = require('cmp')
 
 
@@ -66,18 +66,8 @@ cmp.setup({
   },
  }
 })
+
  end,
 
-  -- {
-  --   "hrsh7th/nvim-cmp",
-  --   opts = function(_, opts)
-  --     -- original LazyVim kind icon formatter
-  --     local format_kinds = opts.formatting.format
-  --     opts.formatting.format = function(entry, item)
-  --       format_kinds(entry, item) -- add icons
-  --       return require("tailwindcss-colorizer-cmp").formatter(entry, item)
-  --     end
-  --   end,
-  -- },
 
  }
