@@ -8,15 +8,14 @@ return {
   {'hrsh7th/cmp-buffer',},
   {'hrsh7th/cmp-path',},
   -- {'hrsh7th/cmp-cmdline',},
-  {'onsails/lspkind.nvim',},
-  -- {'roobert/tailwindcss-colorizer-cmp.nvim', config = true },
+  -- {'onsails/lspkind.nvim',},
  },
 
  -- config = function()
  opts = function(_, opts)
 
   local cmp = require('cmp')
-  local lspkind = require('lspkind')
+  -- local lspkind = require('lspkind')
 
   local kind_icons = {
    Text = "",
@@ -48,6 +47,7 @@ return {
 
   vim.api.nvim_set_hl(0, "VikramOne", { bg = "lightred", fg = "black"})
   vim.api.nvim_set_hl(0, "VikramSel", { bg = "black", fg = "lightblue", bold = true, italic = true})
+  vim.api.nvim_set_hl(0, "VikramBdr", { bg = "black", fg = "lightblue"})
 
 cmp.setup({
  completion = {
@@ -70,12 +70,14 @@ cmp.setup({
 
  window = {
   completion = cmp.config.window.bordered({
-   border = {
-    "", "", "", "", "", "", "", "",
-   },
-   winhighlight = "Normal:VikramSel,FloatBorder:VikramSel,CursorLine:VikramOne,Search:VikramOne"
+   --border = {
+    -- "A", "w", "B", "x", "C", "y", "D", "z",
+   --},
+   winhighlight = "Normal:VikramBdr,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne"
   }),
-  documentation = cmp.config.window.bordered(border_opts),
+  documentation = cmp.config.window.bordered({
+   winhighlight = "Normal:VikramSel,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne"
+  }),
   -- side_padding = 0,
  },
 
@@ -88,15 +90,14 @@ cmp.setup({
  formatting = {
     format = function(entry, vim_item)
       -- Kind icons
-      vim_item.kind = lspkind.presets.default[vim_item.kind]
+      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       -- Source
       vim_item.menu = ({
         buffer = "[Buffer]",
         nvim_lsp = "[LSP]",
-        look = "[Dick]",
-        -- luasnip = "[LuaSnip]",
-        -- nvim_lua = "[Lua]",
-        -- latex_symbols = "[LaTeX]",
+        luasnip = "[LuaSnip]",
+        nvim_lua = "[Lua]",
+        latex_symbols = "[LaTeX]",
       })[entry.source.name]
       return vim_item
     end
@@ -120,6 +121,8 @@ cmp.setup({
   },
  },
 })
+
+
 
  end,
 

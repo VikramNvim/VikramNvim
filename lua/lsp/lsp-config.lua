@@ -40,6 +40,9 @@ return {
   require("lspconfig").marksman.setup {
    on_attach = on_attach
   }
+  -- require("lspconfig").javascriptreact.setup {
+  --  on_attach = on_attach
+  -- }
 
  end
 
