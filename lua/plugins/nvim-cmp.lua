@@ -70,12 +70,15 @@ cmp.setup({
 
  window = {
   completion = cmp.config.window.bordered({
-   --border = {
-    -- "A", "w", "B", "x", "C", "y", "D", "z",
-   --},
+   border = {
+    "┏", "━", "┓", "┃", "┛", "━", "┗", "┃",
+   },
    winhighlight = "Normal:VikramBdr,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne"
   }),
   documentation = cmp.config.window.bordered({
+   border = {
+    "┏", "━", "┓", "┃", "┛", "━", "┗", "┃",
+   },
    winhighlight = "Normal:VikramSel,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne"
   }),
   -- side_padding = 0,
