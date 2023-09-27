@@ -45,9 +45,10 @@ return {
    TypeParameter = "󰅲",
   }
 
-  vim.api.nvim_set_hl(0, "VikramOne", { bg = "lightred", fg = "black"})
-  vim.api.nvim_set_hl(0, "VikramSel", { bg = "black", fg = "lightblue", bold = true, italic = true})
-  vim.api.nvim_set_hl(0, "VikramBdr", { bg = "black", fg = "lightblue"})
+  vim.api.nvim_set_hl(0, "VikramOne", { bg = "#3d3d3d"})
+  vim.api.nvim_set_hl(0, "VikramSel", { bg = "black", fg = "#a072b0", bold = true, italic = true})
+  vim.api.nvim_set_hl(0, "VikramBdr", { bg = "black", fg = "#500050"})
+  vim.api.nvim_set_hl(0, "VikramDesc", { bg = "black", fg = "#dddddd"})
 
 cmp.setup({
  completion = {
@@ -70,18 +71,18 @@ cmp.setup({
 
  window = {
   completion = cmp.config.window.bordered({
-   border = {
-    "┏", "━", "┓", "┃", "┛", "━", "┗", "┃",
-   },
-   winhighlight = "Normal:VikramBdr,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne"
+   -- border = {
+   --  "┏", "━", "┓", "┃", "┛", "━", "┗", "┃",
+   -- },
+   winhighlight = "Normal:VikramBdr,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne",
+  -- side_padding = 0,
   }),
   documentation = cmp.config.window.bordered({
-   border = {
-    "┏", "━", "┓", "┃", "┛", "━", "┗", "┃",
-   },
-   winhighlight = "Normal:VikramSel,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne"
+   -- border = {
+   --  "┏", "━", "┓", "┃", "┛", "━", "┗", "┃",
+   -- },
+   winhighlight = "Normal:VikramDesc,FloatBorder:VikramBdr,CursorLine:VikramOne,Search:VikramOne",
   }),
-  -- side_padding = 0,
  },
 
  snippet = {
