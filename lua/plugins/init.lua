@@ -23,6 +23,16 @@ return {
   end
  },
  {
+  'ggandor/leap.nvim',
+  config = function()
+   require('leap').add_default_mappings()
+  end
+ },
+ -- {
+ --  'glepnir/dbsession.nvim', cmd = { 'SessionSave', 'SessionDelete', 'SessionLoad'},
+ --  opts = {}
+ -- },
+ {
   'nvim-lua/plenary.nvim',
  },
  {
