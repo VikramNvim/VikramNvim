@@ -20,6 +20,7 @@ function M.setup()
  }
 
  local mappings = {
+  ["D"] = { "<cmd>Dashboard<CR>", "Dashboard" },
   ["w"] = { "<cmd>update!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["e"] = { "<cmd>NvimTreeFocus<CR>", "NvimTree" },

@@ -29,6 +29,10 @@ return {
   end
  },
  -- {
+ --  'Shatur/neovim-session-manager',
+ --  dependencies = 'nvim-lua/plenary.nvim',
+ -- },
+ -- {
  --  'glepnir/dbsession.nvim', cmd = { 'SessionSave', 'SessionDelete', 'SessionLoad'},
  --  opts = {}
  -- },
