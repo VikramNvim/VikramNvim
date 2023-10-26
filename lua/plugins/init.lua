@@ -105,11 +105,24 @@ return {
    require("auto-save").setup {}
   end,
  },
+ -- {
+ --  'barrett-ruth/live-server.nvim',
+ --  build = 'yarn global add live-server',
+ --  config = true
+ -- },
  {
-  'barrett-ruth/live-server.nvim',
-  build = 'yarn global add live-server',
-  config = true
+  "aurum77/live-server.nvim",
+  run = function()
+   require"live_server.util".install()
+  end,
+  cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
  },
+ -- {
+ --  "Rogerskelamen/live-server.nvim",
+ --  config = function()
+ --   require "live-server".setup{}
+ --  end
+ -- },
 
 
 
