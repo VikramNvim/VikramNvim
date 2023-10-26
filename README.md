@@ -6,7 +6,7 @@
 
 # Installations
 ```bash
-git clone https://github.com/VimBharat/VimBharat ~/.config/nvim
+git clone https://github.com/VikramNvim/VikramNvim ~/.config/nvim
 ```
 
 # Plugins / Credits
