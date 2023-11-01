@@ -1,32 +1,32 @@
 {
  "use client": {
   "prefix": "uc",
-  "body": ["'use client'"],
+  "body": ["\"use client\""],
   "description": ""
  },
  "useState": {
   "prefix": "useState",
-  "body": ["import React, { useState } from 'react';"],
+  "body": ["import { useState } from \"react\";"],
   "description": ""
  },
  "useEffect": {
   "prefix": "useEffect",
-  "body": ["import React, { useEffect, useState } from 'react';"],
+  "body": ["import { useEffect, useState } from \"react\";"],
   "description": ""
  },
  "Link": {
   "prefix": "Link",
-  "body": ["import Link from 'next/link';"],
+  "body": ["import Link from \"next/link\";"],
   "description": ""
  },
  "Image": {
   "prefix": "Image",
-  "body": ["import Image from 'next/image';"],
+  "body": ["import Image from \"next/image\";"],
   "description": ""
  },
  "axios": {
   "prefix": "axios",
-  "body": ["import axios from 'axios';"],
+  "body": ["import axios from \"axios\";"],
   "description": ""
  },
 
@@ -37,17 +37,17 @@
  },
  "className": {
   "prefix": "cn",
-  "body": ["className='$1'"],
+  "body": ["className=\"$1\""],
   "description": ""
  },
  "onClick": {
   "prefix": "cl",
-  "body": ["onClick={$1}"],
+  "body": ["onClick={$1}$2"],
   "description": ""
  },
  "onChange": {
   "prefix": "ch",
-  "body": ["onChange={$1}"],
+  "body": ["onChange={$1}$2"],
   "description": ""
  },
 
@@ -58,23 +58,23 @@
  },
  "link": {
   "prefix": "link",
-  "body": ["<Link", "href='$2'>", "$1", "</Link>"],
+  "body": ["<Link href=\"$1\">$2</Link>$3"],
   "description": ""
  },
  "image": {
   "prefix": "image",
-  "body": ["<Image", "src{$1}", "layout='responsive'", "/>"],
+  "body": ["<Image src{$1} layout=\"responsive\" $2 />$3"],
   "description": ""
  },
  "input": {
   "prefix": "input",
-  "body": ["<input", "type='text'", "value={$1}", "onChange={$2}", "/>"
+  "body": ["<input type=\"$1\"/>$2"
   ],
   "description": ""
  },
  "button": {
   "prefix": "btn",
-  "body": ["<button", "onClick={$2}>", "$1", "</button>"],
+  "body": ["<button type=\"$1\">$2</button>$3"],
   "description": ""
  },
 
