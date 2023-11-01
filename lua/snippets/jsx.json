@@ -36,7 +36,7 @@
   "description": ""
  },
  "className": {
-  "prefix": "cn",
+  "prefix": "classname",
   "body": ["className=\"$1\""],
   "description": ""
  },
