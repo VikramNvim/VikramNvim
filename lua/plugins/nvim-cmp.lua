@@ -56,14 +56,14 @@ cmp.setup({
  },
  -- preselect = cmp.PreselectMode.None,
  sources = cmp.config.sources {
-  -- { name = "nvim_lsp", priority = 1000 },
-  { name = "luasnip", priority = 750 },
+  { name = "luasnip", priority = 1000 },
+  { name = "nvim_lsp", priority = 750 },
   { name = "buffer", priority = 500 },
   { name = "path", priority = 250 },
  },
  duplicates = {
-  nvim_lsp = 1,
   luasnip = 1,
+  nvim_lsp = 1,
   cmp_tabnine = 1,
   buffer = 1,
   path = 1,

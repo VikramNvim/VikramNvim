@@ -41,13 +41,18 @@
   "description": ""
  },
  "onClick": {
-  "prefix": "cl",
+  "prefix": "oncl",
   "body": ["onClick={$1}$2"],
   "description": ""
  },
  "onChange": {
-  "prefix": "ch",
+  "prefix": "onch",
   "body": ["onChange={$1}$2"],
+  "description": ""
+ },
+ "style": {
+  "prefix": "style",
+  "body": ["style={$1}$2"],
   "description": ""
  },
 
