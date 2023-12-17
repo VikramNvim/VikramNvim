@@ -61,8 +61,15 @@ return {
   dependencies = "nvim-tree/nvim-web-devicons",
   opts = {},
  },
+ -- {
+ --  "numToStr/FTerm.nvim"
+ -- },
  {
-  "numToStr/FTerm.nvim"
+  's1n7ax/nvim-terminal',
+  config = function()
+   vim.o.hidden = true
+   require('nvim-terminal').setup()
+  end,
  },
  {
   'stevearc/dressing.nvim',

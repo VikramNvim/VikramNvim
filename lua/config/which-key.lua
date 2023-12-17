@@ -29,7 +29,8 @@ function M.setup()
   ["f"] = { "<cmd>Telescope<CR>", "Telescope" },
   ["ff"] = { "<cmd>Telescope find_files prompt_prefix=🔍<CR>", "Find File" },
 
-    ["t"] = { "<cmd>lua require('FTerm').open()<CR>", "FTerm" },
+    -- ["t"] = { "<cmd>lua require('FTerm').open()<CR>", "FTerm" },
+    -- ["tt"] = { "<cmd>tab term<CR>", "Term Tab" },
     ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
     ["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close all Buffer" },
