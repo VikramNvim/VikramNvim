@@ -36,3 +36,4 @@ vim.cmd([[autocmd InsertEnter * norm zz]])
 vim.cmd([[autocmd BufNewFile,BufRead *.mdx set filetype=markdown.mdx]])
 --format document on save using lsp
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+

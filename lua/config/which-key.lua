@@ -31,6 +31,11 @@ function M.setup()
 
     -- ["t"] = { "<cmd>lua require('FTerm').open()<CR>", "FTerm" },
     -- ["tt"] = { "<cmd>tab term<CR>", "Term Tab" },
+    
+    [";"] = { "Terminal" },
+    ["+"] = { "Term Height +" },
+    ["-"] = { "Term Height -" },
+
     ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
     ["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close all Buffer" },
