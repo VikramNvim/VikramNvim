@@ -1,17 +1,7 @@
 {
  "use client": {
-  "prefix": "uc",
+  "prefix": "useclient",
   "body": ["\"use client\""],
-  "description": ""
- },
- "useState": {
-  "prefix": "useState",
-  "body": ["import { useState } from \"react\";"],
-  "description": ""
- },
- "useEffect": {
-  "prefix": "useEffect",
-  "body": ["import { useEffect, useState } from \"react\";"],
   "description": ""
  },
  "Link": {
@@ -33,26 +23,6 @@
  "suppressHydrationWarning": {
   "prefix": "suppressHydrationWarning",
   "body": ["suppressHydrationWarning"],
-  "description": ""
- },
- "className": {
-  "prefix": "classname",
-  "body": ["className=\"$1\""],
-  "description": ""
- },
- "onClick": {
-  "prefix": "oncl",
-  "body": ["onClick={$1}$2"],
-  "description": ""
- },
- "onChange": {
-  "prefix": "onch",
-  "body": ["onChange={$1}$2"],
-  "description": ""
- },
- "style": {
-  "prefix": "style",
-  "body": ["style={$1}$2"],
   "description": ""
  },
 
