@@ -478,11 +478,6 @@
   "body": "<strong>$1</strong>$2",
   "description": "HTML - Defines strong text"
  },
- "style": {
-  "prefix": "style",
-  "body": ["<style>", "$1", "</style>"],
-  "description": "HTML - Defines a style definition"
- },
  "sub": {
   "prefix": "sub",
   "body": "<sub>$1</sub>$2",
