@@ -5,7 +5,7 @@ function M.setup()
 
  local conf = {
   window = {
-   border = "single", -- none, single, double, shadow
+   border = "shadow", -- none, single, double, shadow
    position = "bottom",
   },
  }
@@ -35,6 +35,9 @@ function M.setup()
     [";"] = { "Terminal" },
     ["+"] = { "Term Height +" },
     ["-"] = { "Term Height -" },
+    ["z-a"] = { "Single Fold" },
+    ["z-r"] = { "Open All Folds" },
+    ["z-m"] = { "Close All Folds" },
 
     ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
@@ -42,6 +45,8 @@ function M.setup()
     ["c"] = { "<cmd>NvimTreeClose<CR>", "Close NvimTree" },
     ["/"] = { "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "Comment  Toggle" },
     -- ["."] = { "<cmd>'<,'>CommentToggle<CR>", "Comment in V mode" },
+    ["m"] = { "<cmd>lua require('treesj').toggle()<CR>", "TSJ Toggle" },
+
     ["p"] = { "\"_dp", "Replace word" },
     ["y"] = { "\"+y", "unknown" },
     ["Y"] = { "\"+Y", "unknown" },
@@ -50,7 +55,7 @@ function M.setup()
 
 
     z = {
-      name = "Lazy",
+      name = "Lazy / UFO",
       z = { "<cmd>Lazy<cr>", "Lazy" },
       c = { "<cmd>Lazy check<cr>", "Check" },
       C = { "<cmd>Lazy clean<cr>", "Clean" },
