@@ -3,9 +3,11 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
     local lspconfig = require("lspconfig")
+    lspconfig.tsserver.setup {}
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
     local opts = { noremap = true, silent = true }

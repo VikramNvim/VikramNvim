@@ -13,7 +13,7 @@ opt.tabstop = 1
 opt.shiftwidth = 0
 opt.expandtab = true
 opt.number = true
-opt.textwidth = 80
+opt.textwidth = 100
 opt.linebreak = true
 opt.scrolloff = 0
 opt.cmdheight = 0
@@ -35,5 +35,16 @@ vim.cmd([[autocmd InsertEnter * norm zz]])
 -- detect mdx file and set file type to markdown
 vim.cmd([[autocmd BufNewFile,BufRead *.mdx set filetype=markdown.mdx]])
 --format document on save using lsp
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+-- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
+
+
+
+
+
+
+
+vim.o.foldcolumn = '0' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
