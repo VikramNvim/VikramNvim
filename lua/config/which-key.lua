@@ -20,14 +20,15 @@ function M.setup()
  }
 
  local mappings = {
-  ["D"] = { "<cmd>Dashboard<CR>", "Dashboard" },
-  ["w"] = { "<cmd>update!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["e"] = { "<cmd>NvimTreeFocus<CR>", "NvimTree" },
-  -- ["c"] = { "<cmd>Ex<CR>", "" },
-  --
-  ["f"] = { "<cmd>Telescope<CR>", "Telescope" },
-  ["ff"] = { "<cmd>Telescope find_files prompt_prefix=🔍<CR>", "Find File" },
+   ["D"] = { "<cmd>Dashboard<CR>", "Dashboard" },
+   ["w"] = { "<cmd>update!<CR>", "Save" },
+   ["q"] = { "<cmd>q!<CR>", "Quit" },
+   ["e"] = { "<cmd>Neotree focus<CR>", "NeoTree" },
+   ["c"] = { "<cmd>Neotree close<CR>", "Close NeoTree" },
+   -- ["c"] = { "<cmd>Ex<CR>", "" },
+   --
+   ["f"] = { "<cmd>Telescope<CR>", "Telescope" },
+   ["ff"] = { "<cmd>Telescope find_files prompt_prefix=🔍<CR>", "Find File" },
 
     -- ["t"] = { "<cmd>lua require('FTerm').open()<CR>", "FTerm" },
     -- ["tt"] = { "<cmd>tab term<CR>", "Term Tab" },
@@ -42,7 +43,6 @@ function M.setup()
     ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
     ["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close all Buffer" },
-    ["c"] = { "<cmd>NvimTreeClose<CR>", "Close NvimTree" },
     ["/"] = { "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "Comment  Toggle" },
     -- ["."] = { "<cmd>'<,'>CommentToggle<CR>", "Comment in V mode" },
     ["m"] = { "<cmd>lua require('treesj').toggle()<CR>", "TSJ Toggle" },
