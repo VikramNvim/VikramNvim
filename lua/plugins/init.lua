@@ -14,15 +14,6 @@ return {
     end
   },
   {
-    'nvim-lualine/lualine.nvim',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons', opt = true
-    },
-    config = function()
-      require("config.lualine").setup()
-    end
-  },
-  {
     'ggandor/leap.nvim',
     config = function()
       require('leap').add_default_mappings()
