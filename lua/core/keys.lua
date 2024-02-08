@@ -3,7 +3,6 @@ local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
 
-
 --Insert Mode
 keymap("i", "<C-h>", "<Left>", default_opts)
 keymap("i", "<C-l>", "<Right>", default_opts)
@@ -15,8 +14,6 @@ keymap("i", "<Tab>", "<cmd>bnext<CR>", default_opts)
 -- keymap("i", "<S-Tab>", "<cmd>bprev<CR>", default_opts)
 keymap("i", "<S-Tab>", "<cmd>vsplit<CR>", default_opts)
 -- keymap("i", "< - > ", "<cmd>split<CR>", default_opts)
-
-
 
 
 --Normal Mode
@@ -35,12 +32,3 @@ keymap("n", "<Tab>", "<cmd>bnext<CR>", default_opts)
 -- keymap("n", "<S-Tab>", "<cmd>bprev<CR>", default_opts)
 keymap("n", "<S-Tab>", "<cmd>vsplit<CR>", default_opts)
 -- keymap("n", "< - > ", "<cmd>split<CR>", default_opts)
-
-
-
-local keymaps = {
- { '<leader>s', '<cmd>wa<CR>', description = 'Write all buffers', opts = {} },
- { '<leader>F', vim.lsp.buf.formatting_sync, description = 'Format buffer with LSP' },
-}
-
-

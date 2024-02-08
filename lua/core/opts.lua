@@ -35,7 +35,7 @@ opt.splitkeep = "screen"
 opt.splitright = true 
 opt.tabstop = 2
 opt.termguicolors = true 
-opt.timeoutlen = 300
+-- opt.timeoutlen = 300
 opt.undofile = true
 opt.undolevels = 10000
 opt.updatetime = 200 
@@ -52,6 +52,9 @@ opt.fillchars = {
   diff = "╱",
   eob = " ",
 }
+--Which-key opts
+opt.timeout = true
+opt.timeoutlen = 300
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true

@@ -1,10 +1,10 @@
 return {
-  {
-    "folke/which-key.nvim",
-    config = function()
-      require("config.which-key").setup()
-    end
-  },
+  -- {
+  --   "folke/which-key.nvim",
+  --   config = function()
+  --     require("config.which-key").setup()
+  --   end
+  -- },
   {
     'akinsho/bufferline.nvim',
     version = "*",

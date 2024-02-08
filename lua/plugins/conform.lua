@@ -1,46 +1,46 @@
 return {
- "stevearc/conform.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      local conform = require("conform")
-
-      conform.setup({
-        formatters_by_ft = {
-          lua = { "stylua" },
-          svelte = { { "prettierd", "prettier" } },
-          javascript = { { "prettierd", "prettier" } },
-          typescript = { { "prettierd", "prettier" } },
-          javascriptreact = { { "prettierd", "prettier" } },
-          typescriptreact = { { "prettierd", "prettier" } },
-          json = { { "prettierd", "prettier" } },
-          graphql = { { "prettierd", "prettier" } },
-          java = { "google-java-format" },
-          kotlin = { "ktlint" },
-          ruby = { "standardrb" },
-          markdown = { { "prettierd", "prettier" } },
-          erb = { "htmlbeautifier" },
-          html = { { "prettierd", "prettier" } --[[ "htmlbeautifier" ]] },
-          bash = { "beautysh" },
-          proto = { "buf" },
-          rust = { "rustfmt" },
-          yaml = { "yamlfix" },
-          toml = { "taplo" },
-          css = { { "prettierd", "prettier" } },
-          scss = { { "prettierd", "prettier" } },
-        },
-        format_on_save = {
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 1500,
-      },
-      })
-
-      vim.keymap.set({ "n", "v" }, "<leader>l", function()
-        conform.format({
-          lsp_fallback = true,
-          async = false,
-          timeout_ms = 1500,
-        })
-      end, { desc = "Format file or range (in visual mode)" })
-    end,
+ -- "stevearc/conform.nvim",
+ --    event = { "BufReadPre", "BufNewFile" },
+ --    config = function()
+ --      local conform = require("conform")
+ --
+ --      conform.setup({
+ --        formatters_by_ft = {
+ --          lua = { "stylua" },
+ --          svelte = { "prettier" },
+ --          javascript = { "prettier" },
+ --          typescript = { "prettier" },
+ --          javascriptreact = { "prettier" },
+ --          typescriptreact = { "prettier" },
+ --          json = { "prettier" },
+ --          graphql = { "prettier" },
+ --          java = { "google-java-format" },
+ --          kotlin = { "ktlint" },
+ --          ruby = { "standardrb" },
+ --          markdown = { "prettier" },
+ --          erb = { "htmlbeautifier" },
+ --          html = { "prettier" --[[ "htmlbeautifier" ]] },
+ --          bash = { "beautysh" },
+ --          proto = { "buf" },
+ --          rust = { "rustfmt" },
+ --          yaml = { "yamlfix" },
+ --          toml = { "taplo" },
+ --          css = { "prettier" },
+ --          scss = { "prettier" },
+ --        },
+ --        format_on_save = {
+ --        lsp_fallback = true,
+ --        async = false,
+ --        timeout_ms = 1500,
+ --      },
+ --      })
+ --
+ --      vim.keymap.set({ "n", "v" }, "<leader>l", function()
+ --        conform.format({
+ --          lsp_fallback = true,
+ --          async = false,
+ --          timeout_ms = 1500,
+ --        })
+ --      end, { desc = "Format file or range (in visual mode)" })
+ --    end,
 }
