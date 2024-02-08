@@ -2,7 +2,7 @@ return {
   "folke/which-key.nvim",
   event = "VeryLazy",
   config = function()
-    require("config.keymaps").setup()
+    require("plugins.configs.keymaps").setup()
   end,
   -- opts = {
   --   plugins = {

@@ -1,16 +1,10 @@
 return {
-  -- {
-  --   "folke/which-key.nvim",
-  --   config = function()
-  --     require("config.which-key").setup()
-  --   end
-  -- },
   {
     'akinsho/bufferline.nvim',
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      require("config.bufferline").setup()
+      require("plugins.configs.bufferline").setup()
     end
   },
   {
@@ -33,15 +27,11 @@ return {
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
-    opts = {}
+    opts = {},
   },
   {
     "lewis6991/gitsigns.nvim",
     opts = {}
-  },
-  {
-    "kdheepak/lazygit.nvim",
-    dependencies = "nvim-lua/plenary.nvim",
   },
   {
     "folke/trouble.nvim",
@@ -53,35 +43,15 @@ return {
     opts = {},
   },
   {
-    'mbbill/undotree'
-  },
-  {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
-      })
+      require("nvim-surround").setup()
     end
   },
   {
     'ThePrimeagen/vim-be-good'
-  },
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "nvim-lua/plenary.nvim"
-    },
-  },
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {},
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    }
   },
   {
     "Pocco81/auto-save.nvim",
@@ -89,11 +59,6 @@ return {
       require("auto-save").setup {}
     end,
   },
-  -- {
-  --  'barrett-ruth/live-server.nvim',
-  --  build = 'yarn global add live-server',
-  --  config = true
-  -- },
   {
     "aurum77/live-server.nvim",
     run = function()
@@ -101,14 +66,5 @@ return {
     end,
     cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
   },
-  -- {
-  --  "Rogerskelamen/live-server.nvim",
-  --  config = function()
-  --   require "live-server".setup{}
-  --  end
-  -- },
-
-
-
 
 }
