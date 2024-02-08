@@ -3,7 +3,6 @@ local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
 
-
 --Insert Mode
 keymap("i", "<C-h>", "<Left>", default_opts)
 keymap("i", "<C-l>", "<Right>", default_opts)
@@ -17,10 +16,12 @@ keymap("i", "<S-Tab>", "<cmd>vsplit<CR>", default_opts)
 -- keymap("i", "< - > ", "<cmd>split<CR>", default_opts)
 
 
-
-
 --Normal Mode
 keymap("n", ";", ":", default_opts) 
+keymap("n", "<C-h>", "<Left>", default_opts)
+keymap("n", "<C-l>", "<Right>", default_opts)
+keymap("n", "<C-j>", "<Down>", default_opts)
+keymap("n", "<C-k>", "<Up>", default_opts)
 keymap("n", "<C-s>", "<cmd> w <CR>", default_opts) 
 keymap("n", "<C-c>", "<cmd> %y+ <CR>", default_opts)
 keymap("n", "<C-d>", "<C-d>zz", default_opts)
@@ -31,13 +32,3 @@ keymap("n", "<Tab>", "<cmd>bnext<CR>", default_opts)
 -- keymap("n", "<S-Tab>", "<cmd>bprev<CR>", default_opts)
 keymap("n", "<S-Tab>", "<cmd>vsplit<CR>", default_opts)
 -- keymap("n", "< - > ", "<cmd>split<CR>", default_opts)
-
-
-
---legendary.nvim
-local keymaps = {
- { '<leader>s', ':wa<CR>', description = 'Write all buffers', opts = {} },
- { '<leader>F', vim.lsp.buf.formatting_sync, description = 'Format buffer with LSP' },
-}
-
-
