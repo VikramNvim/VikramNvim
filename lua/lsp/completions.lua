@@ -108,11 +108,11 @@ return {
         { name = "path", priority = 250 },
       },
       duplicates = {
-        luasnip = 1,
-        nvim_lsp = 1,
-        cmp_tabnine = 1,
-        buffer = 1,
-        path = 1,
+        luasnip = 0,
+        nvim_lsp = 0,
+        cmp_tabnine = 0,
+        buffer = 0,
+        path = 0,
       },
     })
 
