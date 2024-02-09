@@ -10,6 +10,7 @@ return {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
+      "onsails/lspkind.nvim"
     }
   },
   {
@@ -17,9 +18,44 @@ return {
 
     config = function()
       local cmp = require'cmp'
+      local lspkind = require('lspkind')
       require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.setup({
+        formatting = {
+          format = lspkind.cmp_format({
+            mode = 'symbol_text',
+            maxwidth = 50,
+            ellipsis_char = '...',
+            show_labelDetails = true,
+            before = function (entry, vim_item)
+              vim_item.kind = lspkind.presets.default[vim_item.kind]
+              vim_item.menu = ({
+                luasnip = "[Luasnip]",
+                nvim_lsp = "[LSP]",
+                buffer = "[Buffer]",
+                path = "[Path]",
+                cmdline = "[CMD]",
+              })[entry.source.name]
+              vim_item.kind, vim_item.menu = vim_item.menu, vim_item.kind
+              return vim_item
+            end
+          })
+          -- format = function(entry, vim_item)
+          --   -- vim_item.kind = "kind"
+          --   -- vim_item.menu = "menu"
+          --   vim_item.kind = lspkind.presets.default[vim_item.kind]
+          --   vim_item.menu = ({
+          --     luasnip = "[Luasnip]",
+          --     nvim_lsp = "[LSP]",
+          --     buffer = "[Buffer]",
+          --     path = "[Path]",
+          --     cmdline = "[CMD]",
+          --   })[entry.source.name]
+          --   vim_item.kind, vim_item.menu = vim_item.menu, vim_item.kind
+          --   return vim_item
+          -- end
+        },
         snippet = {
           expand = function(args)
             require('luasnip').lsp_expand(args.body) 
@@ -40,9 +76,9 @@ return {
           { name = 'luasnip', priority = 1000 },
           { name = 'nvim_lsp', priority = 750 },
         }, {
-          { name = 'buffer', priority = 500 },
-          { name = 'path', priority = 250 },
-        }),
+            { name = 'buffer', priority = 500 },
+            { name = 'path', priority = 250 },
+          }),
         duplicates = {
           luasnip = 1,
           nvim_lsp = 1,
