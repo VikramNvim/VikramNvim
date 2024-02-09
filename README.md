@@ -9,7 +9,9 @@
 git clone https://github.com/VikramNvim/VikramNvim ~/.config/nvim
 ```
 
-# Plugins / Credits
+<details>
+<summary>Equipped Plugins</summary>
+<br>
 - [lazy.nvim]()
 - [plenary.nvim]()
 - [telescope.nvim]()
@@ -53,3 +55,5 @@ git clone https://github.com/VikramNvim/VikramNvim ~/.config/nvim
 - [nvim-notify]()
 - [neogi]()
 - [diffview.nvim]()
+</details>
+
