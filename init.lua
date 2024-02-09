@@ -3,9 +3,10 @@ require("core.vars")
 require("core.keys")
 require("core.lazy")
 
-vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#ffffff" })
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#7bc6d4" })
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#f38ba8" })
+-- vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#9399b2" })
+-- vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#89dceb" })
+-- vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#89b4fa" })
+-- vim.api.nvim_set_hl(0, "MyCursorLine", { fg = "#000000", bg = "#cba6f7", bold = true })
 
 -- vim.api.nvim_set_hl(0, "CmpItemKindText", { fg = "#89b4fa" })
 -- vim.api.nvim_set_hl(0, "CmpItemKindSnippet", { fg = "#f38ba8" })
