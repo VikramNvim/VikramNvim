@@ -20,6 +20,40 @@ return {
       local cmp = require'cmp'
       local lspkind = require('lspkind')
       require("luasnip.loaders.from_vscode").lazy_load()
+      --
+      -- vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#ffffff" })
+      -- vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#f0f000" })
+      -- vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#ff0000" })
+      --
+      -- vim.api.nvim_set_hl(0, "CmpItemKindSnippet", { fg = "#00ff00" })
+
+      icons = {
+        Text = "󰉿",
+        Method = "󰆧",
+        Function = "󰊕",
+        Constructor = "",
+        Field = "󰜢",
+        Variable = "󰀫",
+        Class = "󰠱",
+        Interface = "",
+        Module = "",
+        Property = "󰜢",
+        Unit = "󰑭",
+        Value = "󰎠",
+        Enum = "",
+        Keyword = "󰌋",
+        Snippet = "",
+        Color = "󰏘",
+        File = "󰈙",
+        Reference = "󰈇",
+        Folder = "󰉋",
+        EnumMember = "",
+        Constant = "󰏿",
+        Struct = "󰙅",
+        Event = "",
+        Operator = "󰆕",
+        TypeParameter = "",
+      },
 
       cmp.setup({
         formatting = {
@@ -29,7 +63,7 @@ return {
             ellipsis_char = '...',
             show_labelDetails = true,
             before = function (entry, vim_item)
-              vim_item.kind = lspkind.presets.default[vim_item.kind]
+              vim_item.kind = (icons[vim_item.kind] or "foo") .. " " .. vim_item.kind
               vim_item.menu = ({
                 luasnip = "[Luasnip]",
                 nvim_lsp = "[LSP]",
@@ -62,7 +96,9 @@ return {
           end,
         },
         window = {
-          completion = cmp.config.window.bordered(),
+          completion = cmp.config.window.bordered({
+          winhighlight = "Normal:None,FloatBorder:None,CursorLine:CurSearch,Search:None",
+          }),
           documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
