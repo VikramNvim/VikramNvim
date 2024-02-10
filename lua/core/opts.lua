@@ -20,7 +20,9 @@ opt.pumblend = 10
 opt.pumheight = 10
 opt.relativenumber = true 
 opt.scrolloff = 4
+opt.showtabline= 2
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
+-- opt.sessionoptions = 'curdir,folds,globals,help,tabpages,terminal,winsize'
 opt.shiftround = true 
 opt.shiftwidth = 2 
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
