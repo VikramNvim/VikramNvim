@@ -6,24 +6,7 @@ return {
     config = function()
       require("plugins.configs.bufferline").setup()
     end
-  },
-  {
-    'ggandor/leap.nvim',
-    config = function()
-      require('leap').add_default_mappings()
-    end
-  },
-  -- {
-  --  'Shatur/neovim-session-manager',
-  --  dependencies = 'nvim-lua/plenary.nvim',
-  -- },
-  -- {
-  --  'glepnir/dbsession.nvim', cmd = { 'SessionSave', 'SessionDelete', 'SessionLoad'},
-  --  opts = {}
-  -- },
-  {
-    'nvim-lua/plenary.nvim',
-  },
+  }, 
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
