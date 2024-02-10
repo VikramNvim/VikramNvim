@@ -1,28 +1,14 @@
 return {
   {
-    'akinsho/bufferline.nvim',
-    version = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
     config = function()
-      require("plugins.configs.bufferline").setup()
+      local keymap = vim.api.nvim_set_keymap
+      local default_opts = { noremap = true, silent = true }
+      keymap("n", "<leader>gg", "<cmd>LazyGit<CR>", default_opts)
     end
-  },
-  {
-    'ggandor/leap.nvim',
-    config = function()
-      require('leap').add_default_mappings()
-    end
-  },
-  -- {
-  --  'Shatur/neovim-session-manager',
-  --  dependencies = 'nvim-lua/plenary.nvim',
-  -- },
-  -- {
-  --  'glepnir/dbsession.nvim', cmd = { 'SessionSave', 'SessionDelete', 'SessionLoad'},
-  --  opts = {}
-  -- },
-  {
-    'nvim-lua/plenary.nvim',
   },
   {
     'windwp/nvim-autopairs',
