@@ -1,5 +1,8 @@
 return {
   {
+    "numToStr/FTerm.nvim",
+  },
+  {
     "kdheepak/lazygit.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
