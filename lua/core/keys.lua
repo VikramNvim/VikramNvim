@@ -32,3 +32,8 @@ keymap("n", "<Tab>", "<cmd>bnext<CR>", default_opts)
 -- keymap("n", "<S-Tab>", "<cmd>bprev<CR>", default_opts)
 keymap("n", "<S-Tab>", "<cmd>vsplit<CR>", default_opts)
 -- keymap("n", "< - > ", "<cmd>split<CR>", default_opts)
+
+
+--ToggleTerm
+keymap('n', '<A-t>', '<CMD>lua require("FTerm").toggle()<CR>', default_opts)
+keymap('t', '<A-t>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', default_opts)

@@ -72,9 +72,11 @@ function M.setup()
     ["c"] = { "<cmd>Neotree close<CR>", "Neotree Close" },
     -- ["c"] = { "<cmd>Ex<CR>", "" },
   
-    [";"] = { "Terminal" },
+    [";"] = { "<cmd>ToggleTerm<CR>", "ToggleTerm" },
     ["+"] = { "Term Height +" },
     ["-"] = { "Term Height -" },
+
+    -- ["<A-i>"] = { "<cmd><CR>", "ToggleTerm" },
 
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
     ["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close all Buffer" },
