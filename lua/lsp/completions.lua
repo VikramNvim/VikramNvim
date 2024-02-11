@@ -20,6 +20,7 @@ return {
     vscode.lazy_load()
     vscode.lazy_load({ paths = { "./lua/snippets" } })
     luasnip.filetype_extend("javascript", { "javascriptreact" })
+    luasnip.filetype_extend("javascriptreact", { "html" })
     --
     vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#9399b2" })
     vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#89dceb" })
