@@ -22,7 +22,6 @@ opt.relativenumber = true
 opt.scrolloff = 4
 opt.showtabline= 2
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
--- opt.sessionoptions = 'curdir,folds,globals,help,tabpages,terminal,winsize'
 opt.shiftround = true 
 opt.shiftwidth = 2 
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
@@ -37,7 +36,6 @@ opt.splitkeep = "screen"
 opt.splitright = true 
 opt.tabstop = 2
 opt.termguicolors = true 
--- opt.timeoutlen = 300
 opt.undofile = true
 opt.undolevels = 10000
 opt.updatetime = 200 
@@ -56,43 +54,11 @@ opt.fillchars = {
 }
 --Which-key opts
 opt.timeout = true
-opt.timeoutlen = 0 --300
+opt.timeoutlen = 300 --300
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
 end
-
-
--- -- opt.wrap=false
--- opt.laststatus= 2
--- opt.showtabline= 2
--- opt.relativenumber = true
--- opt.cursorline = true
--- opt.cursorcolumn = true
--- opt.mouse = "a"
--- opt.clipboard = "unnamedplus"
--- opt.smartcase = true
--- opt.tabstop = 1
--- opt.shiftwidth = 0
--- opt.expandtab = true
--- opt.number = true
--- opt.textwidth = 100
--- opt.linebreak = true
--- opt.scrolloff = 0
--- opt.cmdheight = 0
--- opt.showmode = false
--- opt.numberwidth = 1
--- opt.smartindent = true
--- opt.completeopt = "menuone,noselect"
--- opt.completeopt = {"menuone", "longest", "preview"}
--- opt.signcolumn = "yes"
--- opt.termguicolors = true
--- opt.spelllang = "en_gb,en_us"
--- opt.mousemodel = "popup"
--- opt.timeoutlen = 500
--- -- vim.o.guifont = "Victor Mono Nerd Font:h11"
-
-
 
 -- highlight on yank
 vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])
@@ -103,13 +69,7 @@ vim.cmd([[autocmd BufNewFile,BufRead *.mdx set filetype=markdown.mdx]])
 --format document on save using lsp
 -- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
-
-
-
-
-
-
-
+--UFO
 vim.o.foldcolumn = '0'
 vim.o.foldlevel = 99 
 vim.o.foldlevelstart = 99
