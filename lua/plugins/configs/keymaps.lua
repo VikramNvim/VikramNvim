@@ -5,7 +5,7 @@ function M.setup()
 
  local conf = {
     plugins = {
-      marks = false, 
+      marks = true, 
       registers = true, 
       spelling = {
         enabled = true,
@@ -23,7 +23,7 @@ function M.setup()
     },
     operators = { gc = "Comments" },
     key_labels = {
-      ["<space>"] = "leader",
+      ["<space>"] = "l",
       -- ["<cr>"] = "RET",
       -- ["<tab>"] = "TAB",
     },
@@ -48,10 +48,10 @@ function M.setup()
       zindex = 1000,            -- positive value to position WhichKey above other floating windows.
     },
     layout = {
-      height = { min = 4, max = 25 }, -- min and max height of the columns
-      width = { min = 20, max = 50 }, -- min and max width of the columns
-      spacing = 3, -- spacing between columns
-      align = "left", -- align columns left, center or right
+      -- height = { min = 4, max = 25 }, -- min and max height of the columns
+      -- width = { min = 20, max = 50 }, -- min and max width of the columns
+      spacing = 5, -- spacing between columns
+      align = "center", -- align columns left, center or right
     },
  }
 
@@ -72,15 +72,11 @@ function M.setup()
     ["c"] = { "<cmd>Neotree close<CR>", "Neotree Close" },
     -- ["c"] = { "<cmd>Ex<CR>", "" },
   
-    [";"] = { "Terminal" },
+    [";"] = { "<cmd>ToggleTerm<CR>", "ToggleTerm" },
     ["+"] = { "Term Height +" },
     ["-"] = { "Term Height -" },
-    ["z-a"] = { "Single Fold" },
-    ["z-r"] = { "Open All Folds" },
-    ["z-m"] = { "Close All Folds" },
-    ["z-A"] = { "Single Fold" },
-    ["z-R"] = { "Open All Folds" },
-    ["z-M"] = { "Close All Folds" },
+
+    -- ["<A-i>"] = { "<cmd><CR>", "ToggleTerm" },
 
     ["x"] = { "<cmd>bd!<CR>", "Close Buffer" },
     ["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close all Buffer" },
@@ -125,10 +121,10 @@ function M.setup()
       f = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "First" },
     },
 
-    -- g = {
-    --   name = "Git",
-    --   s = { "<cmd>Neogit<CR>", "Status" },
-    -- },
+    g = {
+      name = "Git",
+      s = { "<cmd>LazyGit<CR>", "LazyGit" },
+    },
   }
 
   whichkey.setup(conf)

@@ -56,7 +56,7 @@ opt.fillchars = {
 }
 --Which-key opts
 opt.timeout = true
-opt.timeoutlen = 300
+opt.timeoutlen = 0 --300
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
