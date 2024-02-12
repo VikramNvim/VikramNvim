@@ -236,7 +236,7 @@ local bubbles_theme = {
   normal = {
     a = { fg = colors.black, bg = colors.violet },
     b = { fg = colors.white, bg = colors.black },
-    c = { fg = colors.white, bg = colors.black },
+    c = { fg = colors.black, bg = colors.black },
     x = { fg = colors.white, bg = colors.black },
     y = { fg = colors.white, bg = colors.black },
     z = { fg = colors.black, bg = colors.violet },
