@@ -19,10 +19,7 @@ opt.number = true
 opt.pumblend = 10
 opt.pumheight = 10
 opt.relativenumber = true 
-<<<<<<< HEAD
-opt.scrolloff = 4
-=======
->>>>>>> 98fd7d4 (v2 Config)
+opt.scrolloff = 999
 opt.showtabline= 2
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true 
@@ -37,10 +34,7 @@ opt.spelllang = { "en" }
 opt.splitbelow = true 
 opt.splitkeep = "screen"
 opt.splitright = true 
-<<<<<<< HEAD
-opt.tabstop = 2
-=======
->>>>>>> 98fd7d4 (v2 Config)
+opt.tabstop = 4
 opt.termguicolors = true 
 opt.undofile = true
 opt.undolevels = 10000
