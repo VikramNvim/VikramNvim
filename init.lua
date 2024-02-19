@@ -3,6 +3,7 @@ require("core.vars")
 require("core.keys")
 require("core.lazy")
 
+vim.g.skip_ts_context_commentstring_module = true
 -- #000000
 -- #9399b2
 -- #89dceb
