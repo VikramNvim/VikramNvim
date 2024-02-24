@@ -1,9 +1,9 @@
 return {
- "stevearc/conform.nvim",
+  {
+    "stevearc/conform.nvim",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       local conform = require("conform")
-
       conform.setup({
         formatters_by_ft = {
           lua = { "stylua" },
@@ -28,13 +28,12 @@ return {
           css = { "prettier" },
           scss = { "prettier" },
         },
-      --   format_on_save = {
-      --   lsp_fallback = true,
-      --   async = false,
-      --   timeout_ms = 500,
-      -- },
+        --   format_on_save = {
+        --   lsp_fallback = true,
+        --   async = false,
+        --   timeout_ms = 500,
+        -- },
       })
-
       vim.keymap.set({ "n", "v" }, "<leader>l", function()
         conform.format({
           lsp_fallback = true,
@@ -43,4 +42,12 @@ return {
         })
       end, { desc = "Format file" })
     end,
+  },
+  {
+    'Wansmer/treesj',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('treesj').setup({})
+    end,
+  },
 }

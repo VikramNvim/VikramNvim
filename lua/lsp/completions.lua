@@ -18,7 +18,6 @@ return {
   },
   config = function(_, opts)
     local cmp = require'cmp'
-    -- local luasnip = require("luasnip")
     local ls = require "luasnip"
     local types = require "luasnip.util.types"
     local vscode = require("luasnip.loaders.from_vscode")
@@ -30,9 +29,8 @@ return {
     ls.config.set_config {
       history = true,
       delete_check_events = "TextChanged",
-      -- history = false,
-      -- updateevents = "TextChanged,TextChangedI",
-      -- enable_autosnippets = true,
+      updateevents = "TextChanged,TextChangedI",
+      enable_autosnippets = true,
     }
 
     vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#CDD6F4" })
@@ -130,28 +128,18 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<CR>"] = cmp.mapping.confirm({ select = true }), 
         ["<S-CR>"] = cmp.mapping.confirm({
           behavior = cmp.ConfirmBehavior.Replace,
           select = true,
-        }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        }),
         ["<C-CR>"] = function(fallback)
           cmp.abort()
           fallback()
         end,
-        -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        -- ['<C-Space>'] = cmp.mapping.complete(),
-        -- ['<C-e>'] = cmp.mapping.abort(),
-        -- ['<CR>'] = cmp.mapping.confirm({
-        --   behavior = cmp.ConfirmBehavior.Insert,
-        --   select = true,
-        -- }),
       }),
       experimental = {
-        -- I like the new menu better! Nice work hrsh7th
         native_menu = false,
-        -- Let's play with this for a day or two
         ghost_text = false,
       },
     })
