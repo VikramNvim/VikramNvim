@@ -1,4 +1,15 @@
 return {
+
+  'kevinhwang91/nvim-ufo', 
+  dependencies = 'kevinhwang91/promise-async',
+  config = function()
+    require('ufo').setup({
+      provider_selector = function(bufnr, filetype, buftype)
+        return {'treesitter', 'indent'}
+      end
+    })
+  end,
+
  'kevinhwang91/nvim-ufo', 
  dependencies = 'kevinhwang91/promise-async',
  config = function()
@@ -16,4 +27,5 @@ return {
   end
   require('ufo').setup()
  end,
+
 }
