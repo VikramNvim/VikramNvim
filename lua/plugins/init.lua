@@ -1,5 +1,6 @@
 return {
   {
+
     'mattn/emmet-vim',
   },
   {
@@ -11,9 +12,20 @@ return {
   {
     'mg979/vim-visual-multi',
     branch = 'master'
+
+    "numToStr/FTerm.nvim",
+
   },
   {
-    "numToStr/FTerm.nvim",
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      local keymap = vim.api.nvim_set_keymap
+      local default_opts = { noremap = true, silent = true }
+      keymap("n", "<leader>gg", "<cmd>LazyGit<CR>", default_opts)
+    end
   },
   {
     'windwp/nvim-autopairs',
@@ -52,9 +64,10 @@ return {
   },
   {
     "aurum77/live-server.nvim",
-    config = function()
+    run = function()
       require"live_server.util".install()
     end,
     cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
   },
+
 }

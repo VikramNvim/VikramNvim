@@ -102,7 +102,7 @@ return {
               nvim_lua = "[Lua]",
               buffer = "",
               path = "",
-              cmdline = "",
+              cmdline = "",
             })[entry.source.name]
             vim_item.kind, vim_item.menu = vim_item.menu, vim_item.kind
             return vim_item

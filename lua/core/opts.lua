@@ -25,6 +25,11 @@ opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
 -- opt.clipboard = "unnamedplus"
+
+opt.completeopt = "menu,menuone,noselect"
+opt.conceallevel = 2
+opt.confirm = true
+
 opt.cursorline = true
 
 -- Indenting
@@ -41,12 +46,26 @@ opt.mouse = "a"
 
 -- Numbers
 opt.number = true
+
 opt.relativenumber = true
 opt.numberwidth = 2
 opt.ruler = false
 
 -- disable nvim intro
 opt.shortmess:append "sI"
+
+
+opt.pumblend = 10
+opt.pumheight = 10
+opt.relativenumber = true 
+opt.scrolloff = 999
+opt.showtabline= 2
+opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
+opt.shiftround = true 
+opt.shiftwidth = 2 
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
+opt.showmode = false 
+opt.sidescrolloff = 8
 
 opt.signcolumn = "yes"
 opt.splitbelow = true
@@ -81,8 +100,8 @@ vim.cmd([[autocmd BufNewFile,BufRead *.mdx set filetype=markdown.mdx]])
 
 --UFO
 vim.o.foldcolumn = '0'
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = 99 --1 3
+vim.o.foldlevel = 99 
+vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 
