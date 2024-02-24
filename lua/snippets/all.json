@@ -1,5 +1,18 @@
 {
   "vikram": {
+    "prefix": "vikram",
+    "body": ["VikramNvim"]
+  },
+  "vikram1": {
+    "prefix": "vikram1",
+    "body": ["VikramNvim"]
+  },
+  "vikram2": {
+    "prefix": "vikram2",
+    "body": ["VikramNvim"]
+  },
+
+  "appwriteAuth": {
     "prefix": "appwriteAuth",
     "body": [
       "import { Account, Client, ID } from 'appwrite';",

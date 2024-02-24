@@ -1,7 +1,13 @@
 return {
   'hrsh7th/nvim-cmp',
+  version = false,
+  event = "InsertEnter",
   dependencies = {
-    "L3MON4D3/LuaSnip",
+    {
+      "L3MON4D3/LuaSnip",
+      version = "v2.*",
+      build = "make install_jsregexp",
+    },
     "hrsh7th/cmp-nvim-lsp",
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
@@ -10,25 +16,32 @@ return {
     'hrsh7th/cmp-cmdline',
     "onsails/lspkind.nvim",
   },
-  event = "InsertEnter",
   config = function(_, opts)
     local cmp = require'cmp'
-    local luasnip = require("luasnip")
+    -- local luasnip = require("luasnip")
+    local ls = require "luasnip"
+    local types = require "luasnip.util.types"
     local vscode = require("luasnip.loaders.from_vscode")
     local lspkind = require('lspkind')
 
     vscode.lazy_load()
     vscode.lazy_load({ paths = { "./lua/snippets" } })
-    luasnip.filetype_extend("javascript", { "javascriptreact" })
-    luasnip.filetype_extend("javascriptreact", { "html" })
-    --
+    ls.filetype_extend("javascriptreact", { "html" })
+    ls.config.set_config {
+      history = true,
+      delete_check_events = "TextChanged",
+      -- history = false,
+      -- updateevents = "TextChanged,TextChangedI",
+      -- enable_autosnippets = true,
+    }
+
     vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#9399b2" })
     vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#89dceb" })
     vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#89b4fa" })
     vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#f38ba8" })
     vim.api.nvim_set_hl(0, "MyCursorLine", { fg = "#000000", bg = "#cba6f7", bold = true })
 
-    icons = {
+    local icons = {
       Text = "󰉿",
       Method = "󰆧",
       Function = "󰊕",
@@ -40,7 +53,7 @@ return {
       Module = "",
       Property = "󰜢",
       Unit = "󰑭",
-      Value = "󰎠",
+      Value = "",
       Enum = "",
       Keyword = "󰌋",
       Snippet = "󰈮",
@@ -54,12 +67,25 @@ return {
       Event = "",
       Operator = "󰆕",
       TypeParameter = "",
-    },
+    }
 
     cmp.setup({
-      -- completion = {
-      --   completeopt = "menu,menuone",
-      -- },
+      completion = {
+        -- completeopt = "menu,menuone",
+        -- completeopt = "menu,menuone,noinsert",
+      },
+      sources = cmp.config.sources {
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "path" },
+      },
+      duplicates = {
+        luasnip = 1,
+        nvim_lsp = 1,
+        buffer = 1,
+        path = 1,
+      },
       formatting = {
         fields = { "kind", "abbr", "menu" },
         format = lspkind.cmp_format({
@@ -72,6 +98,7 @@ return {
             vim_item.menu = ({
               luasnip = "",
               nvim_lsp = "",
+              nvim_lua = "[Lua]",
               buffer = "",
               path = "",
               cmdline = "",
@@ -93,27 +120,38 @@ return {
           col_offset = -3,
           winhighlight = "Normal:None,FloatBorder:None,CursorLine:MyCursorLine,Search:None",
         }),
-        documentation = cmp.config.window.bordered(),
+        -- documentation = cmp.config.window.bordered(),
       },
       mapping = cmp.mapping.preset.insert({
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<C-e>"] = cmp.mapping.abort(),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<S-CR>"] = cmp.mapping.confirm({
+          behavior = cmp.ConfirmBehavior.Replace,
+          select = true,
+        }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<C-CR>"] = function(fallback)
+          cmp.abort()
+          fallback()
+        end,
+        -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        -- ['<C-Space>'] = cmp.mapping.complete(),
+        -- ['<C-e>'] = cmp.mapping.abort(),
+        -- ['<CR>'] = cmp.mapping.confirm({
+        --   behavior = cmp.ConfirmBehavior.Insert,
+        --   select = true,
+        -- }),
       }),
-      sources = cmp.config.sources {
-        { name = "luasnip", priority = 1000 },
-        { name = "nvim_lsp", priority = 750 },
-        { name = "buffer", priority = 500 },
-        { name = "path", priority = 250 },
-      },
-      duplicates = {
-        luasnip = 0,
-        nvim_lsp = 0,
-        cmp_tabnine = 0,
-        buffer = 0,
-        path = 0,
+      experimental = {
+        -- I like the new menu better! Nice work hrsh7th
+        native_menu = false,
+        -- Let's play with this for a day or two
+        ghost_text = false,
       },
     })
 
@@ -143,5 +181,4 @@ return {
   })
 
   end,
-
 }
