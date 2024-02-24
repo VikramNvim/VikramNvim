@@ -5,7 +5,7 @@ return {
   dependencies = {
     {
       "L3MON4D3/LuaSnip",
-      version = "v2.*",
+      version = false,
       build = "make install_jsregexp",
     },
     "hrsh7th/cmp-nvim-lsp",
@@ -35,11 +35,12 @@ return {
       -- enable_autosnippets = true,
     }
 
-    vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#9399b2" })
-    vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#89dceb" })
-    vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#89b4fa" })
-    vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#f38ba8" })
-    vim.api.nvim_set_hl(0, "MyCursorLine", { fg = "#000000", bg = "#cba6f7", bold = true })
+    vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = "#CDD6F4" })
+    vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#94E2D5" })
+    vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#89B4FA" })
+    vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#F38BA8" })
+    vim.api.nvim_set_hl(0, "MyCursorLine", { fg = "#000000", bg = "#F5C2E7", bold = true })
+    vim.api.nvim_set_hl(0, "CmpBorder", { fg = "#45475A" })
 
     local icons = {
       Text = "󰉿",
@@ -72,7 +73,7 @@ return {
     cmp.setup({
       completion = {
         -- completeopt = "menu,menuone",
-        -- completeopt = "menu,menuone,noinsert",
+        completeopt = "menu,menuone,noinsert",
       },
       sources = cmp.config.sources {
         { name = "nvim_lsp" },
@@ -115,10 +116,10 @@ return {
       },
       window = {
         completion = cmp.config.window.bordered({
-          -- border = "none",
+          border = "rounded",
           side_padding = 0,
           col_offset = -3,
-          winhighlight = "Normal:None,FloatBorder:None,CursorLine:MyCursorLine,Search:None",
+          winhighlight = "Normal:None,FloatBorder:CmpBorder,CursorLine:MyCursorLine,Search:None",
         }),
         -- documentation = cmp.config.window.bordered(),
       },
