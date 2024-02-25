@@ -12,9 +12,9 @@ return {
   {
     'mg979/vim-visual-multi',
     branch = 'master'
-
+  },
+  {
     "numToStr/FTerm.nvim",
-
   },
   {
     "kdheepak/lazygit.nvim",
